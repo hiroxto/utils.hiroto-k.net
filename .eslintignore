@@ -1,0 +1,6 @@
+/.idea/
+/.vscode/
+/.nuxt/
+/dist/
+/node_modules/
+!.eslintrc.js
