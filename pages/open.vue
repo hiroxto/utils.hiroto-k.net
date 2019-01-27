@@ -165,7 +165,7 @@
         ];
       },
       normalBrowsersText () {
-        return this.normalBrowsers.join(', ')
+        return this.normalBrowsers.join(', ');
       },
       reverseBrowsers () {
         return [
@@ -174,7 +174,7 @@
         ];
       },
       reverseBrowsersText () {
-        return this.reverseBrowsers.join(', ')
+        return this.reverseBrowsers.join(', ');
       },
     },
     methods: {
