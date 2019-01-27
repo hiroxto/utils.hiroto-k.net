@@ -4,16 +4,16 @@
       <h1 class="title">
         Open urls
       </h1>
-      <p>Total urls : <span v-text="urlsCount"></span></p>
-      <p>Normal : Mobile Firefox</p>
-      <p>Reverse : PC Firefox, PC Chrome</p>
+      <p>Total urls : {{ urlsCount }}</p>
+      <p>Normal : {{ normalBrowsersText }}</p>
+      <p>Reverse : {{ reverseBrowsersText }}</p>
 
       <div class="buttons">
         <button
           class="button is-large is-primary is-rounded"
           @click="openNormal"
         >
-          Open
+          Open normal
         </button>
         <button
           class="button is-large is-primary is-rounded"
@@ -158,6 +158,23 @@
       },
       urlsCount () {
         return this.urls.length;
+      },
+      normalBrowsers () {
+        return [
+          'Mobile Firefox',
+        ];
+      },
+      normalBrowsersText () {
+        return this.normalBrowsers.join(', ')
+      },
+      reverseBrowsers () {
+        return [
+          'PC Firefox',
+          'PC Chrome',
+        ];
+      },
+      reverseBrowsersText () {
+        return this.reverseBrowsers.join(', ')
       },
     },
     methods: {
