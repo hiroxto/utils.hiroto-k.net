@@ -124,6 +124,10 @@
             url: 'http://kamo.apreed.com/uj-tuso65.html',
           },
           {
+            name: 'EF210[新] 運用情報',
+            url: 'http://kamo.apreed.com/uj-tuso210.html',
+          },
+          {
             name: 'DE10[新] 運用情報',
             url: 'http://kamo.apreed.com/uj-tuso10.html',
           },
