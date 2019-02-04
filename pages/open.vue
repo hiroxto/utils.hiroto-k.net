@@ -33,6 +33,7 @@
             :title="url.name"
             v-text="`${url.name} (${url.url})`"
             target="_blank"
+            rel="noopener noreferrer"
           >
           </a>
         </li>
