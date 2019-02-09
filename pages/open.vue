@@ -133,6 +133,10 @@
             url: 'http://kamo.apreed.com/uj-tuso10.html',
           },
           {
+            name: 'HD300[新] 運用情報',
+            url: 'http://kamo.apreed.com/uj-tuso300.html',
+          },
+          {
             name: 'EH500[仙貨] 運用情報',
             url: 'http://kamo.apreed.com/uj-sen500.html',
           },
