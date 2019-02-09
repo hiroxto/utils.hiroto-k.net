@@ -153,6 +153,10 @@
             url: 'http://kamo.apreed.com/uj-sui210.html',
           },
           {
+            name: 'EF210[岡] 運用情報',
+            url: 'http://kamo.apreed.com/uj-oka210.html',
+          },
+          {
             name: 'Eventernote',
             url: 'https://www.eventernote.com/',
           },
