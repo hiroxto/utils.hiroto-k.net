@@ -168,13 +168,14 @@
       urlsCount () {
         return this.urls.length;
       },
+      joinSeparator: () => ', ',
       normalBrowsers () {
         return [
           'Mobile Firefox',
         ];
       },
       normalBrowsersText () {
-        return this.normalBrowsers.join(', ');
+        return this.normalBrowsers.join(this.joinSeparator);
       },
       reverseBrowsers () {
         return [
@@ -183,7 +184,7 @@
         ];
       },
       reverseBrowsersText () {
-        return this.reverseBrowsers.join(', ');
+        return this.reverseBrowsers.join(this.joinSeparator);
       },
     },
     methods: {
