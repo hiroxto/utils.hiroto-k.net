@@ -22,6 +22,20 @@
           Open (reverse)
         </button>
       </div>
+      <div class="buttons">
+        <button
+          class="button is-large is-primary is-rounded"
+          @click="openExceptNormal"
+        >
+          Open except (normal)
+        </button>
+        <button
+          class="button is-large is-primary is-rounded"
+          @click="openExceptedReverse"
+        >
+          Open except (reverse)
+        </button>
+      </div>
 
       <ul class="menu-list">
         <li
@@ -208,6 +222,16 @@
       openReverse () {
         this
           .reversedUrls
+          .forEach(url => window.open(url.url, '_blank'));
+      },
+      openExceptNormal () {
+        this
+          .exceptedUrls
+          .forEach(url => window.open(url.url, '_blank'));
+      },
+      openExceptedReverse () {
+        this
+          .exceptedReversedUrls
           .forEach(url => window.open(url.url, '_blank'));
       },
     },
