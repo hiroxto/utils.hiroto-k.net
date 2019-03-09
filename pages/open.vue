@@ -13,13 +13,13 @@
           class="button is-large is-primary is-rounded"
           @click="openNormal"
         >
-          Open normal
+          Open (normal)
         </button>
         <button
           class="button is-large is-primary is-rounded"
           @click="openReverse"
         >
-          Open reverse
+          Open (reverse)
         </button>
       </div>
 
