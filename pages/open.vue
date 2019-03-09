@@ -171,6 +171,12 @@
       reversedUrls () {
         return this.urls.slice(0).reverse();
       },
+      exceptedUrls () {
+        return this.urls.filter(url => !url.except);
+      },
+      exceptedReversedUrls () {
+        return this.exceptedUrls.slice(0).reverse();
+      },
       urlsCount () {
         return this.urls.length;
       },
