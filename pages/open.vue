@@ -5,6 +5,7 @@
         Open urls
       </h1>
       <p>Total urls : {{ urlsCount }}</p>
+      <p>Excepted urls : {{ exceptedUrlsCount }}</p>
       <p>Normal : {{ normalBrowsersText }}</p>
       <p>Reverse : {{ reverseBrowsersText }}</p>
 
@@ -219,6 +220,9 @@
       },
       urlsCount () {
         return this.urls.length;
+      },
+      exceptedUrlsCount () {
+        return this.exceptedUrls.length;
       },
       joinSeparator: () => ', ',
       normalBrowsers () {
