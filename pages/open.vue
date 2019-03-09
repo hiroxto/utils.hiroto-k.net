@@ -55,6 +55,7 @@
           {
             name: '運用情報',
             url: 'https://loo-ool.com/rail/e233.cgi',
+            except: true,
           },
           {
             name: '埼京線 運用情報',
@@ -75,6 +76,7 @@
           {
             name: '貨物ちゃんねる',
             url: 'http://kamo.apreed.com/',
+            except: true,
           },
           {
             name: 'EF65[田] 運用情報',
