@@ -1,7 +1,7 @@
 {
   "name": "root-80.cf",
   "version": "1.0.0",
-  "description": "My majestic Nuxt.js project",
+  "description": "Utility site for me.",
   "author": "Hiroto Kitazawa",
   "private": true,
   "scripts": {
