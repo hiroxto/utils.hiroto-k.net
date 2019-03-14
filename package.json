@@ -29,6 +29,7 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^5.2.2",
+    "marked": "^0.6.1",
     "nodemon": "^1.18.10",
     "vue-markdown": "^2.2.4"
   },
