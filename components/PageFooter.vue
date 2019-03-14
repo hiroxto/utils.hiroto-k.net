@@ -47,6 +47,10 @@
             title: 'Open urls',
             to: '/open',
           },
+          {
+            title: 'Train number',
+            to: '/train-number',
+          },
         ];
       },
     },
