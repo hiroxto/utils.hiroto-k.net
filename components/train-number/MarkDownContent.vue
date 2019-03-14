@@ -15,10 +15,6 @@
   export default {
     name: 'MarkDownContent',
     props: {
-      title: {
-        required: true,
-        type: String,
-      },
       content: {
         required: true,
         type: String,
