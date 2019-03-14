@@ -2,15 +2,15 @@
   <section class="section">
     <div class="container">
       <div class="content">
-        <vue-markdown :source="source">
-        </vue-markdown>
+        <div v-html="markedContent">
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-  import VueMarkdown from 'vue-markdown';
+  import marked from 'marked';
 
   export default {
     name: 'MarkDownContent',
@@ -20,8 +20,10 @@
         type: String,
       },
     },
-    components: {
-      VueMarkdown,
+    computed: {
+      markedContent () {
+        return marked(this.source);
+      },
     },
   };
 </script>
