@@ -2,7 +2,7 @@
   <section class="section">
     <div class="container">
       <div class="content">
-        <vue-markdown :source="content">
+        <vue-markdown :source="source">
         </vue-markdown>
       </div>
     </div>
@@ -15,7 +15,7 @@
   export default {
     name: 'MarkDownContent',
     props: {
-      content: {
+      source: {
         required: true,
         type: String,
       },
