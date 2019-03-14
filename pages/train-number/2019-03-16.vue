@@ -5,6 +5,7 @@
 
 <script>
   import MarkDownContent from '~/components/train-number/MarkDownContent';
+  import contentSource from '~/assets/train-number/2019-03-16.md';
 
   export default {
     components: {
@@ -18,11 +19,7 @@
     computed: {
       pageTitle: () => '2019年3月16日 改正',
       source () {
-        return `
-# ${this.pageTitle}
-
-現在作成中。
-        `;
+        return contentSource;
       },
     },
 
