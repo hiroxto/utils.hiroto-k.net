@@ -5,7 +5,7 @@
         <div class="columns">
           <div class="column">
             <p class="footer-column-title">
-              © 2019 hiroto-k
+              © 2019 root-80
             </p>
           </div>
 
