@@ -38,19 +38,12 @@
     name: 'PageFooter',
     computed: {
       pageLinks () {
+        const pageLinks = this.$store.state.pageLinks;
+
         return [
-          {
-            title: 'Top page',
-            to: '/',
-          },
-          {
-            title: 'Open urls',
-            to: '/open',
-          },
-          {
-            title: 'Train number',
-            to: '/train-number',
-          },
+          pageLinks.topPageLink,
+          pageLinks.openUrlsPageLink,
+          pageLinks.trainNumberPageLink,
         ];
       },
     },
