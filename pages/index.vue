@@ -39,7 +39,7 @@
       pageLinks () {
         return [
           {
-            title: 'Open Url',
+            title: 'Open urls',
             to: '/open',
           },
           {
