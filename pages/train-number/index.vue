@@ -2,7 +2,7 @@
   <section class="section">
     <div class="container">
       <h1 class="title">
-        root-80.cf
+        {{ pageTitle }}
       </h1>
 
       <aside class="menu">
@@ -31,23 +31,27 @@
   export default {
     head () {
       return {
-        title: 'root-80.cf',
-        titleTemplate: '',
+        title: this.pageTitle,
       };
     },
     computed: {
+      pageTitle: () => '列車番号メモ',
       pageLinks () {
         return [
           {
-            title: 'Open Url',
-            to: '/open',
+            title: '2018年3月17日 改正',
+            to: '/train-number/2018-03-17',
           },
           {
-            title: 'Train number',
-            to: '/train-number',
+            title: '2019年3月16日 改正',
+            to: '/train-number/2019-03-16',
           },
         ];
       },
     },
   };
 </script>
+
+<style scoped>
+
+</style>

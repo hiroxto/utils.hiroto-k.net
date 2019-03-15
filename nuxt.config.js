@@ -47,6 +47,12 @@ module.exports = {
   */
   build: {
     extend (config, { isDev, isClient }) {
+      config.module.rules.push({
+        test: /\.md$/,
+        loader: 'raw-loader',
+        exclude: /(node_modules)/,
+      });
+
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
