@@ -12,6 +12,7 @@ module.exports = {
       { name: 'robots', content: 'noindex, nofollow, noarchive' },
     ],
     link: [
+      { rel: 'apple-touch-icon', sizes: '192x192', href: '/apple-touch-icon.png' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700' },
     ],
   },
