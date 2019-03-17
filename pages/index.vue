@@ -37,15 +37,11 @@
     },
     computed: {
       pageLinks () {
+        const pageLinks = this.$store.state.pageLinks;
+
         return [
-          {
-            title: 'Open urls',
-            to: '/open',
-          },
-          {
-            title: 'Train number',
-            to: '/train-number',
-          },
+          pageLinks.openUrlsPageLink,
+          pageLinks.trainNumberPageLink,
         ];
       },
     },
