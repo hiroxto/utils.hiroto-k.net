@@ -7,7 +7,7 @@
   import marked from 'marked';
 
   export default {
-    name: "MarkDownContent",
+    name: 'MarkDownContent',
     props: {
       source: {
         required: true,
@@ -15,11 +15,11 @@
       },
     },
     computed: {
-      markedContent() {
+      markedContent () {
         return marked(this.source);
       },
     },
-  }
+  };
 </script>
 
 <style scoped>
