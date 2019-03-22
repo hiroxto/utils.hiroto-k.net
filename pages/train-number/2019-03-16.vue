@@ -1,15 +1,15 @@
 <template>
-  <mark-down-content :source="source">
-  </mark-down-content>
+  <mark-down-only-content :source="source">
+  </mark-down-only-content>
 </template>
 
 <script>
-  import MarkDownContent from '~/components/train-number/MarkDownContent';
+  import MarkDownOnlyContent from '~/components/MarkDownOnlyContent';
   import contentSource from '~/assets/train-number/2019-03-16.md';
 
   export default {
     components: {
-      MarkDownContent,
+      MarkDownOnlyContent,
     },
     head () {
       return {
