@@ -13,7 +13,7 @@
   import marked from 'marked';
 
   export default {
-    name: 'MarkDownContent',
+    name: 'MarkDownOnlyContent',
     props: {
       source: {
         required: true,
