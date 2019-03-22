@@ -2,15 +2,15 @@
   <section class="section">
     <div class="container">
       <div class="content">
-        <div v-html="markedContent">
-        </div>
+        <mark-down-content :source="source">
+        </mark-down-content>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-  import marked from 'marked';
+  import MarkDownContent from '~/components/MarkDownContent';
 
   export default {
     name: 'MarkDownOnlyContent',
@@ -20,10 +20,8 @@
         type: String,
       },
     },
-    computed: {
-      markedContent () {
-        return marked(this.source);
-      },
+    components: {
+      MarkDownContent,
     },
   };
 </script>
