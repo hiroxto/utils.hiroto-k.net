@@ -4,7 +4,8 @@
       <nuxt>
       </nuxt>
     </main>
-    <page-footer></page-footer>
+    <page-footer>
+    </page-footer>
   </div>
 </template>
 
