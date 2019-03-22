@@ -14,13 +14,13 @@
           class="button is-medium is-primary is-rounded"
           @click="openNormal"
         >
-          Open (normal)
+          Open normal
         </button>
         <button
           class="button is-medium is-primary is-rounded"
           @click="openReverse"
         >
-          Open (reverse)
+          Open reverse
         </button>
       </div>
       <div class="buttons">
@@ -28,13 +28,13 @@
           class="button is-medium is-primary is-rounded"
           @click="openExceptNormal"
         >
-          Open except (normal)
+          Open except normal
         </button>
         <button
           class="button is-medium is-primary is-rounded"
           @click="openExceptedReverse"
         >
-          Open except (reverse)
+          Open except reverse
         </button>
       </div>
 
