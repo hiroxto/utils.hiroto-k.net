@@ -1,12 +1,6 @@
 <template>
-  <section class="section">
-    <div class="container">
-      <div class="content">
-        <div v-html="markedContent">
-        </div>
-      </div>
-    </div>
-  </section>
+  <div v-html="markedContent">
+  </div>
 </template>
 
 <script>
