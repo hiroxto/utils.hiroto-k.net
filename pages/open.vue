@@ -45,8 +45,8 @@
         >
           <a
             :href="url.url"
-            :title="url.name"
-            v-text="`${url.name} (${url.url})`"
+            :title="buildUrlTitle(url)"
+            v-text="buildUrlTitle(url)"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -244,6 +244,9 @@
       },
     },
     methods: {
+      buildUrlTitle (url) {
+        return `${url.name} (${url.url})`;
+      },
       openNormal () {
         this
           .urls
