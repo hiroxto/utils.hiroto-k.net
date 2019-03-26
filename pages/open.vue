@@ -11,13 +11,13 @@
 
       <div class="buttons">
         <button
-          class="button is-medium is-primary is-rounded"
+          :class="buttonClass"
           @click="openNormal"
         >
           Open normal
         </button>
         <button
-          class="button is-medium is-primary is-rounded"
+          :class="buttonClass"
           @click="openReverse"
         >
           Open reverse
@@ -25,13 +25,13 @@
       </div>
       <div class="buttons">
         <button
-          class="button is-medium is-primary is-rounded"
+          :class="buttonClass"
           @click="openExceptNormal"
         >
           Open except normal
         </button>
         <button
-          class="button is-medium is-primary is-rounded"
+          :class="buttonClass"
           @click="openExceptedReverse"
         >
           Open except reverse
@@ -242,6 +242,7 @@
       reverseBrowsersText () {
         return this.reverseBrowsers.join(this.joinSeparator);
       },
+      buttonClass: () => 'button is-medium is-primary is-rounded',
     },
     methods: {
       buildUrlTitle (url) {
