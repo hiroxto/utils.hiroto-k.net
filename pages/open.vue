@@ -242,7 +242,7 @@
       reverseBrowsersText () {
         return this.reverseBrowsers.join(this.joinSeparator);
       },
-      buttonClass: () => 'button is-medium is-danger is-rounded',
+      buttonClass: () => 'button is-medium is-danger is-rounded has-text-warning',
     },
     methods: {
       buildUrlTitle (url) {
