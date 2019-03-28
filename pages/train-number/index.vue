@@ -1,8 +1,7 @@
 <template>
   <section class="section">
     <div class="container">
-      <h1 class="title">
-        {{ pageTitle }}
+      <h1 class="title" v-text="pageTitle">
       </h1>
 
       <h2 class="subtitle">
@@ -21,8 +20,8 @@
             <nuxt-link
               :to="pageLink.to"
               :title="pageLink.title"
+              v-text="pageLink.title"
             >
-              {{ pageLink.title }}
             </nuxt-link>
           </li>
         </ul>
