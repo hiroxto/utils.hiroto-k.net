@@ -21,9 +21,9 @@
               <nuxt-link
                 :to="pageLink.to"
                 :title="pageLink.title"
+                v-text="pageLink.title"
                 class="footer-column-link"
               >
-                {{ pageLink.title }}
               </nuxt-link>
             </p>
           </div>
