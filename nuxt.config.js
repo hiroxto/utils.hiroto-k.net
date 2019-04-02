@@ -47,6 +47,8 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    extractCSS: true,
+
     extend (config, { isDev, isClient }) {
       config.module.rules.push({
         test: /\.md$/,
