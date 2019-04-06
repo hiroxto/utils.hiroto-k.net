@@ -14,8 +14,8 @@
               Page links
             </p>
             <p
-              v-for="(pageLink, pageLinksKey) in pageLinks"
-              :key="pageLinksKey"
+              v-for="(pageLink, allPageLinksKey) in allPageLinks"
+              :key="allPageLinksKey"
               class="footer-column-item"
             >
               <nuxt-link
@@ -37,7 +37,7 @@
   export default {
     name: 'PageFooter',
     computed: {
-      pageLinks () {
+      allPageLinks () {
         return this.$store.getters['pageLinks/allPageLinks'];
       },
     },
