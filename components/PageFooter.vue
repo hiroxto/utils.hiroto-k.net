@@ -38,13 +38,7 @@
     name: 'PageFooter',
     computed: {
       pageLinks () {
-        const pageLinks = this.$store.state.pageLinks;
-
-        return [
-          pageLinks.topPageLink,
-          pageLinks.openUrlsPageLink,
-          pageLinks.trainNumberPageLink,
-        ];
+        return this.$store.getters['pageLinks/allPageLinks'];
       },
     },
   };
