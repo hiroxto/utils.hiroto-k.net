@@ -12,3 +12,19 @@ export const state = () => ({
     to: '/train-number',
   },
 });
+
+export const getters = {
+  allPageLinks (state) {
+    return [
+      state.topPageLink,
+      state.openUrlsPageLink,
+      state.trainNumberPageLink,
+    ];
+  },
+  pageLinks (state) {
+    return [
+      state.openUrlsPageLink,
+      state.trainNumberPageLink,
+    ];
+  },
+};
