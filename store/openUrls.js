@@ -144,6 +144,9 @@ export const state = () => ({
 });
 
 export const getters = {
+  urlsCount (state) {
+    return state.urls.length;
+  },
   reversedUrls (state) {
     return state.urls.slice(0).reverse();
   },
