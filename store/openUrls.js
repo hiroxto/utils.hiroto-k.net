@@ -153,10 +153,10 @@ export const getters = {
   exceptedUrls (state) {
     return state.urls.filter(url => !url.except);
   },
-  exceptedReversedUrls (state) {
-    return state.exceptedUrls.slice(0).reverse();
+  exceptedReversedUrls (state, getters) {
+    return getters.exceptedUrls.slice(0).reverse();
   },
-  exceptedUrlsCount (state) {
-    return state.exceptedUrls.length;
+  exceptedUrlsCount (state, getters) {
+    return getters.exceptedUrls.length;
   },
 };
