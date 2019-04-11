@@ -22,5 +22,6 @@
 <style scoped>
   .app {
     font-family: "Noto Sans JP", "Helvetica", sans-serif;
+    letter-spacing: .1em;
   }
 </style>
