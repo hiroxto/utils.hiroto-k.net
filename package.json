@@ -14,8 +14,8 @@
   },
   "dependencies": {
     "cross-env": "^5.2.0",
-    "nuxt": "^2.6.1",
-    "nuxt-buefy": "^0.3.4"
+    "nuxt": "^2.6.2",
+    "nuxt-buefy": "^0.3.5"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
@@ -23,13 +23,13 @@
     "eslint-config-standard": "^12.0.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^2.1.2",
-    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-import": "^2.17.1",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^5.2.2",
     "marked": "^0.6.2",
-    "nodemon": "^1.18.10",
+    "nodemon": "^1.18.11",
     "raw-loader": "^2.0.0"
   },
   "browserslist": [
