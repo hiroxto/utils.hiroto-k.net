@@ -1,8 +1,7 @@
 <template>
   <section class="section">
     <div class="container">
-      <h1 class="title">
-        root-80.cf
+      <h1 class="title" v-text="title">
       </h1>
 
       <aside class="menu">
@@ -31,11 +30,14 @@
   export default {
     head () {
       return {
-        title: 'root-80.cf',
+        title: this.title,
         titleTemplate: '',
       };
     },
     computed: {
+      title () {
+        return 'root-80.cf';
+      },
       pageLinks () {
         return this.$store.getters['pageLinks/pageLinks'];
       },
