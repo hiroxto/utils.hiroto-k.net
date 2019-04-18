@@ -35,4 +35,10 @@ export const getters = {
       state.trainNumberPageLink,
     ];
   },
+  trainNumberContentPageLinks (state) {
+    return [
+      state.trainNumber20180317PageLink,
+      state.trainNumber20190316PageLink,
+    ];
+  },
 };
