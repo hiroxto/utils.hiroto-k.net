@@ -1,9 +1,9 @@
 <template>
   <section class="section">
     <div class="container">
-      <h1 class="title">
-        Open urls
+      <h1 class="title" v-text="title">
       </h1>
+
       <p>Total urls : {{ urlsCount }}</p>
       <p>Excepted urls : {{ exceptedUrlsCount }}</p>
       <p>Normal : {{ normalBrowsersText }}</p>
@@ -63,7 +63,7 @@
   export default {
     head () {
       return {
-        title: 'Open urls',
+        title: this.title,
       };
     },
     computed: {
@@ -77,6 +77,9 @@
         exceptedReversedUrls: 'openUrls/exceptedReversedUrls',
         exceptedUrlsCount: 'openUrls/exceptedUrlsCount',
       }),
+      title () {
+        return 'Open urls';
+      },
       joinSeparator: () => ', ',
       normalBrowsers () {
         return [
