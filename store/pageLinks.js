@@ -11,6 +11,14 @@ export const state = () => ({
     title: 'Train number',
     to: '/train-number',
   },
+  trainNumber20180317PageLink: {
+    title: '2018年3月17日 改正',
+    to: '/train-number/2018-03-17',
+  },
+  trainNumber20190316PageLink: {
+    title: '2019年3月16日 改正',
+    to: '/train-number/2019-03-16',
+  },
 });
 
 export const getters = {
