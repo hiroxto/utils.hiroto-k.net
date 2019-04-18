@@ -40,16 +40,7 @@
     computed: {
       pageTitle: () => '列車番号メモ',
       pageLinks () {
-        return [
-          {
-            title: '2018年3月17日 改正',
-            to: '/train-number/2018-03-17',
-          },
-          {
-            title: '2019年3月16日 改正',
-            to: '/train-number/2019-03-16',
-          },
-        ];
+        return this.$store.getters['pageLinks/trainNumberContentPageLinks'];
       },
     },
   };
