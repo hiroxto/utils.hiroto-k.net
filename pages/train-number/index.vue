@@ -14,13 +14,13 @@
         </p>
         <ul class="menu-list">
           <li
-            v-for="(pageLink, pageLinksKey) in pageLinks"
-            :key="pageLinksKey"
+            v-for="(trainNumberContentPageLink, trainNumberContentPageLinksKey) in trainNumberContentPageLinks"
+            :key="trainNumberContentPageLinksKey"
           >
             <nuxt-link
-              :to="pageLink.to"
-              :title="pageLink.title"
-              v-text="pageLink.title"
+              :to="trainNumberContentPageLink.to"
+              :title="trainNumberContentPageLink.title"
+              v-text="trainNumberContentPageLink.title"
             >
             </nuxt-link>
           </li>
@@ -39,7 +39,7 @@
     },
     computed: {
       pageTitle: () => '列車番号メモ',
-      pageLinks () {
+      trainNumberContentPageLinks () {
         return this.$store.getters['pageLinks/trainNumberContentPageLinks'];
       },
     },
