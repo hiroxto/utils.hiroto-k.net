@@ -64,6 +64,9 @@
     head () {
       return {
         title: this.title,
+        meta: [
+          { hid: 'description', name: 'description', content: this.description },
+        ],
       };
     },
     computed: {
@@ -78,6 +81,7 @@
         exceptedUrlsCount: 'openUrls/exceptedUrlsCount',
       }),
       title: () => 'Open urls',
+      description: () => 'Open the urls.',
       joinSeparator: () => ', ',
       normalBrowsers () {
         return [
