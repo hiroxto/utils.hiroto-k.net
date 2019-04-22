@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <div class="container">
-      <h1 class="title" v-text="pageTitle">
+      <h1 class="title" v-text="title">
       </h1>
 
       <h2 class="subtitle">
@@ -34,11 +34,11 @@
   export default {
     head () {
       return {
-        title: this.pageTitle,
+        title: this.title,
       };
     },
     computed: {
-      pageTitle: () => '列車番号メモ',
+      title: () => '列車番号メモ',
       trainNumberContentPageLinks () {
         return this.$store.getters['pageLinks/trainNumberContentPageLinks'];
       },

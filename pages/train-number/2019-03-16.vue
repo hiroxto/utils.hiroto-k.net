@@ -13,11 +13,11 @@
     },
     head () {
       return {
-        title: this.pageTitle,
+        title: this.title,
       };
     },
     computed: {
-      pageTitle: () => '2019年3月16日 改正',
+      title: () => '2019年3月16日 改正',
       source () {
         return contentSource;
       },
