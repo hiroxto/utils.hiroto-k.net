@@ -32,10 +32,14 @@
       return {
         title: this.title,
         titleTemplate: '',
+        meta: [
+          { hid: 'description', name: 'description', content: this.description },
+        ],
       };
     },
     computed: {
       title: () => 'root-80.cf',
+      description: () => 'Utility site for me.',
       pageLinks () {
         return this.$store.getters['pageLinks/pageLinks'];
       },
