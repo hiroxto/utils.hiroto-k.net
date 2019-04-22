@@ -35,9 +35,7 @@
       };
     },
     computed: {
-      title () {
-        return 'root-80.cf';
-      },
+      title: () => 'root-80.cf',
       pageLinks () {
         return this.$store.getters['pageLinks/pageLinks'];
       },

@@ -77,9 +77,7 @@
         exceptedReversedUrls: 'openUrls/exceptedReversedUrls',
         exceptedUrlsCount: 'openUrls/exceptedUrlsCount',
       }),
-      title () {
-        return 'Open urls';
-      },
+      title: () => 'Open urls',
       joinSeparator: () => ', ',
       normalBrowsers () {
         return [
