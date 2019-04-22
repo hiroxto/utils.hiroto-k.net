@@ -14,10 +14,16 @@
     head () {
       return {
         title: this.title,
+        meta: [
+          { hid: 'description', name: 'description', content: this.description },
+        ],
       };
     },
     computed: {
       title: () => '2019年3月16日 改正',
+      description () {
+        return `列車番号メモ ${this.title}`;
+      },
       source () {
         return contentSource;
       },
