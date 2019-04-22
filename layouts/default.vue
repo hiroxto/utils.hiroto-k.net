@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  import PageFooter from '~/components/PageFooter';
+  import PageFooter from '~/components/layouts/PageFooter';
 
   export default {
     components: {
