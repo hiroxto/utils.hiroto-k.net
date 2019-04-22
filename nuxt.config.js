@@ -10,7 +10,7 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'robots', content: 'noindex, nofollow, noarchive' },
-      { hid: 'description', name: 'description', content: 'Generic description.'},
+      { hid: 'description', name: 'description', content: 'Generic description.' },
     ],
     link: [
       { rel: 'apple-touch-icon', sizes: '192x192', href: '/apple-touch-icon.png' },
