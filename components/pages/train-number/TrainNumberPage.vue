@@ -7,7 +7,7 @@
   import MarkDownOnlyContent from '~/components/MarkDownOnlyContent';
 
   export default {
-    name: "TrainNumberPage",
+    name: 'TrainNumberPage',
     components: {
       MarkDownOnlyContent,
     },
@@ -28,7 +28,7 @@
         return '';
       },
     },
-  }
+  };
 </script>
 
 <style scoped>
