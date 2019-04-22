@@ -4,8 +4,7 @@
       <h1 class="title" v-text="title">
       </h1>
 
-      <h2 class="subtitle">
-        入出場,車輪転削などの予定臨や、パターンが概ね決まっている臨工や臨単の列車番号のメモ。
+      <h2 class="subtitle" v-text="description">
       </h2>
 
       <aside class="menu">
@@ -35,10 +34,14 @@
     head () {
       return {
         title: this.title,
+        meta: [
+          { hid: 'description', name: 'description', content: this.description },
+        ],
       };
     },
     computed: {
       title: () => '列車番号メモ',
+      description: () => '入出場,車輪転削などの予定臨や、パターンが概ね決まっている臨工や臨単の列車番号のメモ。',
       trainNumberContentPageLinks () {
         return this.$store.getters['pageLinks/trainNumberContentPageLinks'];
       },
