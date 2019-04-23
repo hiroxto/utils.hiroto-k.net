@@ -25,6 +25,7 @@
       ...mapState({
         urls: state => state.openUrls.urls,
       }),
+      buttonClass: () => 'button is-medium is-danger is-rounded has-text-warning',
     },
     methods: {
       buildUrlTitle (url) {
