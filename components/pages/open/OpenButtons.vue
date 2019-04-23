@@ -73,5 +73,8 @@
 </script>
 
 <style scoped>
-
+  .buttons {
+    margin-top: 3vmin;
+    margin-bottom: 3vmin;
+  }
 </style>
