@@ -36,27 +36,15 @@
         </button>
       </div>
 
-      <ul class="menu-list">
-        <li
-          v-for="(url, urlsKey) in urls"
-          :key="urlsKey"
-        >
-          <a
-            :href="url.url"
-            :title="buildUrlTitle(url)"
-            v-text="buildUrlTitle(url)"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-          </a>
-        </li>
-      </ul>
+      <urls-list>
+      </urls-list>
     </div>
   </section>
 </template>
 
 <script>
   import InfoView from '~/components/pages/open/InfoView';
+  import UrlsList from '~/components/pages/open/UrlsList';
   import { mapState, mapGetters } from 'vuex';
 
   export default {
@@ -70,11 +58,9 @@
     },
     components: {
       InfoView,
+      UrlsList,
     },
     computed: {
-      ...mapState({
-        urls: state => state.openUrls.urls,
-      }),
       ...mapGetters({
         reversedUrls: 'openUrls/reversedUrls',
         exceptedUrls: 'openUrls/exceptedUrls',
@@ -85,9 +71,6 @@
       buttonClass: () => 'button is-medium is-danger is-rounded has-text-warning',
     },
     methods: {
-      buildUrlTitle (url) {
-        return `${url.name} (${url.url})`;
-      },
       openNormal () {
         this
           .urls
