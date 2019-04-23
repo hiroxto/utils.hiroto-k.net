@@ -4,10 +4,8 @@
       <h1 class="title" v-text="title">
       </h1>
 
-      <p>Total urls : {{ urlsCount }}</p>
-      <p>Excepted urls : {{ exceptedUrlsCount }}</p>
-      <p>Normal : {{ normalBrowsersText }}</p>
-      <p>Reverse : {{ reverseBrowsersText }}</p>
+      <info-view>
+      </info-view>
 
       <div class="buttons">
         <button
@@ -58,6 +56,7 @@
 </template>
 
 <script>
+  import InfoView from '~/components/pages/open/InfoView';
   import { mapState, mapGetters } from 'vuex';
 
   export default {
@@ -69,37 +68,20 @@
         ],
       };
     },
+    components: {
+      InfoView,
+    },
     computed: {
       ...mapState({
         urls: state => state.openUrls.urls,
       }),
       ...mapGetters({
-        urlsCount: 'openUrls/urlsCount',
         reversedUrls: 'openUrls/reversedUrls',
         exceptedUrls: 'openUrls/exceptedUrls',
         exceptedReversedUrls: 'openUrls/exceptedReversedUrls',
-        exceptedUrlsCount: 'openUrls/exceptedUrlsCount',
       }),
       title: () => 'Open urls',
       description: () => 'Open the urls.',
-      joinSeparator: () => ', ',
-      normalBrowsers () {
-        return [
-          'Mobile Firefox',
-        ];
-      },
-      normalBrowsersText () {
-        return this.normalBrowsers.join(this.joinSeparator);
-      },
-      reverseBrowsers () {
-        return [
-          'PC Firefox',
-          'PC Chrome',
-        ];
-      },
-      reverseBrowsersText () {
-        return this.reverseBrowsers.join(this.joinSeparator);
-      },
       buttonClass: () => 'button is-medium is-danger is-rounded has-text-warning',
     },
     methods: {
