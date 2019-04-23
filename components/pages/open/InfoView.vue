@@ -11,7 +11,7 @@
   import { mapGetters } from 'vuex';
 
   export default {
-    name: "InfoView",
+    name: 'InfoView',
     computed: {
       ...mapGetters({
         urlsCount: 'openUrls/urlsCount',
@@ -36,7 +36,7 @@
         return this.reverseBrowsers.join(this.joinSeparator);
       },
     },
-  }
+  };
 </script>
 
 <style scoped>

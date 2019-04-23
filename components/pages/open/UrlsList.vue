@@ -17,10 +17,10 @@
 </template>
 
 <script>
-  import {mapState} from 'vuex';
+  import { mapState } from 'vuex';
 
   export default {
-    name: "UrlsList",
+    name: 'UrlsList',
     computed: {
       ...mapState({
         urls: state => state.openUrls.urls,
@@ -31,7 +31,7 @@
         return `${url.name} (${url.url})`;
       },
     },
-  }
+  };
 </script>
 
 <style scoped>
