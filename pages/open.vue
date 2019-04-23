@@ -18,7 +18,7 @@
 
 <script>
   import InfoView from '~/components/pages/open/InfoView';
-  import OpenButtons from "~/components/pages/open/OpenButtons";
+  import OpenButtons from '~/components/pages/open/OpenButtons';
   import UrlsList from '~/components/pages/open/UrlsList';
 
   export default {
