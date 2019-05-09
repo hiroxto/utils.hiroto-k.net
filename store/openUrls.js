@@ -2,27 +2,27 @@ export const state = () => ({
   urls: [
     {
       name: '運用情報',
-      url: 'https://loo-ool.com/rail/e233.cgi',
+      url: 'https://loo-ool.com/rail/',
       except: true,
     },
     {
       name: '埼京線 運用情報',
-      url: 'https://loo-ool.com/rail/e233.cgi?a=A',
+      url: 'https://loo-ool.com/rail/A/',
       except: false,
     },
     {
       name: '武蔵野線 運用情報',
-      url: 'https://loo-ool.com/rail/e233.cgi?a=M',
+      url: 'https://loo-ool.com/rail/M/',
       except: false,
     },
     {
       name: '京葉線 運用情報',
-      url: 'https://loo-ool.com/rail/e233.cgi?a=B',
+      url: 'https://loo-ool.com/rail/B/',
       except: false,
     },
     {
       name: '八高・川越線 運用情報',
-      url: 'https://loo-ool.com/rail/e233.cgi?a=W',
+      url: 'https://loo-ool.com/rail/W/',
       except: false,
     },
     {
