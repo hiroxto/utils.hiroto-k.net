@@ -34,12 +34,14 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex';
+
   export default {
     name: 'PageFooter',
     computed: {
-      allPageLinks () {
-        return this.$store.getters['pageLinks/allPageLinks'];
-      },
+      ...mapGetters({
+        allPageLinks: 'pageLinks/allPageLinks',
+      }),
     },
   };
 </script>
