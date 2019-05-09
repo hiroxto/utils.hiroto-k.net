@@ -20,6 +20,7 @@
       joinSeparator: () => ', ',
       normalBrowsers () {
         return [
+          'PC Chrome',
           'Mobile Firefox',
         ];
       },
@@ -29,7 +30,6 @@
       reverseBrowsers () {
         return [
           'PC Firefox',
-          'PC Chrome',
         ];
       },
       reverseBrowsersText () {
