@@ -23,5 +23,7 @@
   .app {
     font-family: "Noto Sans JP", "Helvetica", sans-serif;
     letter-spacing: .1em;
+    text-align: justify;
+    word-break: break-all;
   }
 </style>
