@@ -38,13 +38,13 @@
       };
     },
     computed: {
-      title() {
+      title () {
         return 'root-80.cf';
       },
-      description() {
+      description () {
         return 'Utility site for me.';
       },
-      pageLinks() {
+      pageLinks () {
         return this.$store.getters['pageLinks/pageLinks'];
       },
     },

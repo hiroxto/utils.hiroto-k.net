@@ -7,7 +7,7 @@
     extends: TrainNumberPage,
     computed: {
       title () {
-       return '2018年3月17日 改正';
+        return '2018年3月17日 改正';
       },
       source () {
         return contentSource;
