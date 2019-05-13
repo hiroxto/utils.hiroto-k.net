@@ -30,6 +30,8 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex';
+
   export default {
     head () {
       return {
@@ -40,14 +42,14 @@
       };
     },
     computed: {
+      ...mapGetters({
+        trainNumberContentPageLinks: 'pageLinks/trainNumberContentPageLinks',
+      }),
       title () {
         return '列車番号メモ';
       },
       description () {
         return '入出場,車輪転削などの予定臨や、パターンが概ね決まっている臨工や臨単の列車番号のメモ。';
-      },
-      trainNumberContentPageLinks () {
-        return this.$store.getters['pageLinks/trainNumberContentPageLinks'];
       },
     },
   };
