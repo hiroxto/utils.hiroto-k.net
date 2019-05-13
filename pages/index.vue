@@ -27,6 +27,8 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex';
+
   export default {
     head () {
       return {
@@ -38,14 +40,14 @@
       };
     },
     computed: {
+      ...mapGetters({
+        pageLinks: 'pageLinks/pageLinks'
+      }),
       title () {
         return 'root-80.cf';
       },
       description () {
         return 'Utility site for me.';
-      },
-      pageLinks () {
-        return this.$store.getters['pageLinks/pageLinks'];
       },
     },
   };
