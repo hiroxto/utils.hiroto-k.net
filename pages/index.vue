@@ -38,9 +38,13 @@
       };
     },
     computed: {
-      title: () => 'root-80.cf',
-      description: () => 'Utility site for me.',
-      pageLinks () {
+      title() {
+        return 'root-80.cf';
+      },
+      description() {
+        return 'Utility site for me.';
+      },
+      pageLinks() {
         return this.$store.getters['pageLinks/pageLinks'];
       },
     },
