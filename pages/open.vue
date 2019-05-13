@@ -36,8 +36,12 @@
       UrlsList,
     },
     computed: {
-      title: () => 'Open urls',
-      description: () => 'Open the urls.',
+      title () {
+        return 'Open urls';
+      },
+      description () {
+        return 'Open the urls.';
+      },
     },
   };
 </script>
