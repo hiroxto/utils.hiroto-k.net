@@ -17,7 +17,9 @@
         urlsCount: 'openUrls/urlsCount',
         exceptedUrlsCount: 'openUrls/exceptedUrlsCount',
       }),
-      joinSeparator: () => ', ',
+      joinSeparator () {
+        return ', ';
+      },
       normalBrowsers () {
         return [
           'PC Chrome',

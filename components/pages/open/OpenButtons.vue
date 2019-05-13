@@ -46,7 +46,9 @@
         exceptedUrls: 'openUrls/exceptedUrls',
         exceptedReversedUrls: 'openUrls/exceptedReversedUrls',
       }),
-      buttonClass: () => 'button is-medium is-danger is-rounded has-text-warning',
+      buttonClass () {
+        return 'button is-medium is-danger is-rounded has-text-warning';
+      },
     },
     methods: {
       openNormal () {
