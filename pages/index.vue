@@ -41,7 +41,7 @@
     },
     computed: {
       ...mapGetters({
-        pageLinks: 'pageLinks/pageLinks'
+        pageLinks: 'pageLinks/pageLinks',
       }),
       title () {
         return 'root-80.cf';
