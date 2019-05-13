@@ -20,7 +20,9 @@
       };
     },
     computed: {
-      title: () => 'title',
+      title () {
+        return 'title';
+      },
       description () {
         return `列車番号メモ ${this.title}`;
       },

@@ -6,7 +6,9 @@
     name: 'TrainNumber20180317Page',
     extends: TrainNumberPage,
     computed: {
-      title: () => '2018年3月17日 改正',
+      title () {
+       return '2018年3月17日 改正';
+      },
       source () {
         return contentSource;
       },
