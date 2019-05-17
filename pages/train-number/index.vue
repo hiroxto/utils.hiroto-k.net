@@ -7,29 +7,14 @@
       <h2 class="subtitle" v-text="description">
       </h2>
 
-      <aside class="menu">
-        <p class="menu-label">
-          Pages
-        </p>
-        <ul class="menu-list">
-          <li
-            v-for="(trainNumberContentPageLink, trainNumberContentPageLinksKey) in trainNumberContentPageLinks"
-            :key="trainNumberContentPageLinksKey"
-          >
-            <nuxt-link
-              :to="trainNumberContentPageLink.to"
-              :title="trainNumberContentPageLink.title"
-              v-text="trainNumberContentPageLink.title"
-            >
-            </nuxt-link>
-          </li>
-        </ul>
-      </aside>
+      <links-menu :links="trainNumberContentPageLinks">
+      </links-menu>
     </div>
   </section>
 </template>
 
 <script>
+  import LinksMenu from '~/components/ui/LinksMenu';
   import { mapGetters } from 'vuex';
 
   export default {
@@ -40,6 +25,9 @@
           { hid: 'description', name: 'description', content: this.description },
         ],
       };
+    },
+    components: {
+      LinksMenu,
     },
     computed: {
       ...mapGetters({
