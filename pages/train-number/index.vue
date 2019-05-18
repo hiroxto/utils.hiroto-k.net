@@ -14,33 +14,33 @@
 </template>
 
 <script>
-  import LinksMenu from '~/components/ui/LinksMenu';
-  import { mapGetters } from 'vuex';
+import LinksMenu from '~/components/ui/LinksMenu';
+import { mapGetters } from 'vuex';
 
-  export default {
-    head () {
-      return {
-        title: this.title,
-        meta: [
-          { hid: 'description', name: 'description', content: this.description },
-        ],
-      };
+export default {
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: this.description },
+      ],
+    };
+  },
+  components: {
+    LinksMenu,
+  },
+  computed: {
+    ...mapGetters({
+      trainNumberContentPageLinks: 'pageLinks/trainNumberContentPageLinks',
+    }),
+    title () {
+      return '列車番号メモ';
     },
-    components: {
-      LinksMenu,
+    description () {
+      return '入出場,車輪転削などの予定臨や、パターンが概ね決まっている臨工や臨単の列車番号のメモ。';
     },
-    computed: {
-      ...mapGetters({
-        trainNumberContentPageLinks: 'pageLinks/trainNumberContentPageLinks',
-      }),
-      title () {
-        return '列車番号メモ';
-      },
-      description () {
-        return '入出場,車輪転削などの予定臨や、パターンが概ね決まっている臨工や臨単の列車番号のメモ。';
-      },
-    },
-  };
+  },
+};
 </script>
 
 <style scoped>

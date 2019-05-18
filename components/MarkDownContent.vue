@@ -4,22 +4,22 @@
 </template>
 
 <script>
-  import marked from 'marked';
+import marked from 'marked';
 
-  export default {
-    name: 'MarkDownContent',
-    props: {
-      source: {
-        required: true,
-        type: String,
-      },
+export default {
+  name: 'MarkDownContent',
+  props: {
+    source: {
+      required: true,
+      type: String,
     },
-    computed: {
-      markedContent () {
-        return marked(this.source);
-      },
+  },
+  computed: {
+    markedContent () {
+      return marked(this.source);
     },
-  };
+  },
+};
 </script>
 
 <style scoped>

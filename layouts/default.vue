@@ -10,13 +10,13 @@
 </template>
 
 <script>
-  import PageFooter from '~/components/layouts/PageFooter';
+import PageFooter from '~/components/layouts/PageFooter';
 
-  export default {
-    components: {
-      PageFooter,
-    },
-  };
+export default {
+  components: {
+    PageFooter,
+  },
+};
 </script>
 
 <style scoped>

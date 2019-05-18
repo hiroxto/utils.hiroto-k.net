@@ -33,46 +33,46 @@
 </template>
 
 <script>
-  import { mapState, mapGetters } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 
-  export default {
-    name: 'OpenButtons',
-    computed: {
-      ...mapState({
-        urls: state => state.openUrls.urls,
-      }),
-      ...mapGetters({
-        reversedUrls: 'openUrls/reversedUrls',
-        exceptedUrls: 'openUrls/exceptedUrls',
-        exceptedReversedUrls: 'openUrls/exceptedReversedUrls',
-      }),
-      buttonClass () {
-        return 'button is-medium is-danger is-rounded has-text-warning';
-      },
+export default {
+  name: 'OpenButtons',
+  computed: {
+    ...mapState({
+      urls: state => state.openUrls.urls,
+    }),
+    ...mapGetters({
+      reversedUrls: 'openUrls/reversedUrls',
+      exceptedUrls: 'openUrls/exceptedUrls',
+      exceptedReversedUrls: 'openUrls/exceptedReversedUrls',
+    }),
+    buttonClass () {
+      return 'button is-medium is-danger is-rounded has-text-warning';
     },
-    methods: {
-      openNormal () {
-        this
-          .urls
-          .forEach(url => window.open(url.url, '_blank'));
-      },
-      openReverse () {
-        this
-          .reversedUrls
-          .forEach(url => window.open(url.url, '_blank'));
-      },
-      openExceptNormal () {
-        this
-          .exceptedUrls
-          .forEach(url => window.open(url.url, '_blank'));
-      },
-      openExceptedReverse () {
-        this
-          .exceptedReversedUrls
-          .forEach(url => window.open(url.url, '_blank'));
-      },
+  },
+  methods: {
+    openNormal () {
+      this
+        .urls
+        .forEach(url => window.open(url.url, '_blank'));
     },
-  };
+    openReverse () {
+      this
+        .reversedUrls
+        .forEach(url => window.open(url.url, '_blank'));
+    },
+    openExceptNormal () {
+      this
+        .exceptedUrls
+        .forEach(url => window.open(url.url, '_blank'));
+    },
+    openExceptedReverse () {
+      this
+        .exceptedReversedUrls
+        .forEach(url => window.open(url.url, '_blank'));
+    },
+  },
+};
 </script>
 
 <style scoped>

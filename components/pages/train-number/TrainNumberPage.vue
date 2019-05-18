@@ -4,33 +4,33 @@
 </template>
 
 <script>
-  import MarkDownOnlyContent from '~/components/MarkDownOnlyContent';
+import MarkDownOnlyContent from '~/components/MarkDownOnlyContent';
 
-  export default {
-    name: 'TrainNumberPage',
-    components: {
-      MarkDownOnlyContent,
+export default {
+  name: 'TrainNumberPage',
+  components: {
+    MarkDownOnlyContent,
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: this.description },
+      ],
+    };
+  },
+  computed: {
+    title () {
+      return 'title';
     },
-    head () {
-      return {
-        title: this.title,
-        meta: [
-          { hid: 'description', name: 'description', content: this.description },
-        ],
-      };
+    description () {
+      return `列車番号メモ ${this.title}`;
     },
-    computed: {
-      title () {
-        return 'title';
-      },
-      description () {
-        return `列車番号メモ ${this.title}`;
-      },
-      source () {
-        return '';
-      },
+    source () {
+      return '';
     },
-  };
+  },
+};
 </script>
 
 <style scoped>
