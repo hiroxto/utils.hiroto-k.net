@@ -34,16 +34,16 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex';
+import { mapGetters } from 'vuex';
 
-  export default {
-    name: 'PageFooter',
-    computed: {
-      ...mapGetters({
-        allPageLinks: 'pageLinks/allPageLinks',
-      }),
-    },
-  };
+export default {
+  name: 'PageFooter',
+  computed: {
+    ...mapGetters({
+      allPageLinks: 'pageLinks/allPageLinks',
+    }),
+  },
+};
 </script>
 
 <style scoped>

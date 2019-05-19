@@ -17,31 +17,31 @@
 </template>
 
 <script>
-  import InfoView from '~/components/pages/open/InfoView';
-  import OpenButtons from '~/components/pages/open/OpenButtons';
-  import UrlsList from '~/components/pages/open/UrlsList';
+import InfoView from '~/components/pages/open/InfoView';
+import OpenButtons from '~/components/pages/open/OpenButtons';
+import UrlsList from '~/components/pages/open/UrlsList';
 
-  export default {
-    head () {
-      return {
-        title: this.title,
-        meta: [
-          { hid: 'description', name: 'description', content: this.description },
-        ],
-      };
+export default {
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: this.description },
+      ],
+    };
+  },
+  components: {
+    InfoView,
+    OpenButtons,
+    UrlsList,
+  },
+  computed: {
+    title () {
+      return 'Open urls';
     },
-    components: {
-      InfoView,
-      OpenButtons,
-      UrlsList,
+    description () {
+      return 'Open the urls.';
     },
-    computed: {
-      title () {
-        return 'Open urls';
-      },
-      description () {
-        return 'Open the urls.';
-      },
-    },
-  };
+  },
+};
 </script>

@@ -17,21 +17,21 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex';
+import { mapState } from 'vuex';
 
-  export default {
-    name: 'UrlsList',
-    computed: {
-      ...mapState({
-        urls: state => state.openUrls.urls,
-      }),
+export default {
+  name: 'UrlsList',
+  computed: {
+    ...mapState({
+      urls: state => state.openUrls.urls,
+    }),
+  },
+  methods: {
+    buildUrlTitle (url) {
+      return `${url.name} (${url.url})`;
     },
-    methods: {
-      buildUrlTitle (url) {
-        return `${url.name} (${url.url})`;
-      },
-    },
-  };
+  },
+};
 </script>
 
 <style scoped>

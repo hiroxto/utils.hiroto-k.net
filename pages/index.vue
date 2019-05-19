@@ -11,32 +11,32 @@
 </template>
 
 <script>
-  import LinksMenu from '~/components/ui/LinksMenu';
-  import { mapGetters } from 'vuex';
+import LinksMenu from '~/components/ui/LinksMenu';
+import { mapGetters } from 'vuex';
 
-  export default {
-    head () {
-      return {
-        title: this.title,
-        titleTemplate: '',
-        meta: [
-          { hid: 'description', name: 'description', content: this.description },
-        ],
-      };
+export default {
+  head () {
+    return {
+      title: this.title,
+      titleTemplate: '',
+      meta: [
+        { hid: 'description', name: 'description', content: this.description },
+      ],
+    };
+  },
+  components: {
+    LinksMenu,
+  },
+  computed: {
+    ...mapGetters({
+      pageLinks: 'pageLinks/pageLinks',
+    }),
+    title () {
+      return 'root-80.cf';
     },
-    components: {
-      LinksMenu,
+    description () {
+      return 'Utility site for me.';
     },
-    computed: {
-      ...mapGetters({
-        pageLinks: 'pageLinks/pageLinks',
-      }),
-      title () {
-        return 'root-80.cf';
-      },
-      description () {
-        return 'Utility site for me.';
-      },
-    },
-  };
+  },
+};
 </script>

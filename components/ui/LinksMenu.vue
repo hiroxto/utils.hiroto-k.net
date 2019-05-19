@@ -20,19 +20,19 @@
 </template>
 
 <script>
-  export default {
-    name: 'LinksMenu',
-    props: {
-      links: {
-        required: true,
-        type: Array,
-      },
-      label: {
-        type: String,
-        default () {
-          return 'pages';
-        },
+export default {
+  name: 'LinksMenu',
+  props: {
+    links: {
+      required: true,
+      type: Array,
+    },
+    label: {
+      type: String,
+      default () {
+        return 'pages';
       },
     },
-  };
+  },
+};
 </script>

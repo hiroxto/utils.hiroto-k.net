@@ -10,20 +10,20 @@
 </template>
 
 <script>
-  import MarkDownContent from '~/components/MarkDownContent';
+import MarkDownContent from '~/components/MarkDownContent';
 
-  export default {
-    name: 'MarkDownOnlyContent',
-    props: {
-      source: {
-        required: true,
-        type: String,
-      },
+export default {
+  name: 'MarkDownOnlyContent',
+  props: {
+    source: {
+      required: true,
+      type: String,
     },
-    components: {
-      MarkDownContent,
-    },
-  };
+  },
+  components: {
+    MarkDownContent,
+  },
+};
 </script>
 
 <style scoped>

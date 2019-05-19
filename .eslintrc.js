@@ -22,7 +22,7 @@ module.exports = {
     'no-console': 'off',
     'no-new': 'off',
     'indent': ['error', 2],
-    'vue/script-indent': ['error', 2, { 'baseIndent': 1, 'switchCase': 1 }],
+    'vue/script-indent': ['error', 2, { 'baseIndent': 0, 'switchCase': 1 }],
     'vue/html-indent': ['error', 2, { 'attribute': 1, 'closeBracket': 0, 'baseIndent': 1 }],
     'vue/html-closing-bracket-newline': ['error', { 'singleline': 'never', 'multiline': 'always' }],
     'vue/component-name-in-template-casing': ['error', 'kebab-case'],
