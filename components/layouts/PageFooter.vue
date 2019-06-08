@@ -47,24 +47,24 @@ export default {
 </script>
 
 <style scoped>
-  .footer-column-title {
-    color: #000000;
-    font-size: 1.2rem;
-    font-weight: 500;
-  }
+.footer-column-title {
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
 
-  .footer-column-item {
-    color: #000000;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1;
-  }
+.footer-column-item {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+}
 
-  .footer-column-link {
-    color: #12428F;
-  }
+.footer-column-link {
+  color: #12428F;
+}
 
-  .footer-column-link:hover {
-    color: #3273dc;
-  }
+.footer-column-link:hover {
+  color: #3273dc;
+}
 </style>
