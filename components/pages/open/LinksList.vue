@@ -1,13 +1,13 @@
 <template>
   <ul class="menu-list">
     <li
-      v-for="(url, urlsKey) in urls"
-      :key="urlsKey"
+      v-for="(link, linksKey) in links"
+      :key="linksKey"
     >
       <a
-        :href="url.to"
-        :title="buildUrlTitle(url)"
-        v-text="buildUrlTitle(url)"
+        :href="link.to"
+        :title="buildUrlTitle(link)"
+        v-text="buildUrlTitle(link)"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -23,12 +23,12 @@ export default {
   name: 'LinksList',
   computed: {
     ...mapState({
-      urls: state => state.openUrls.urls,
+      links: state => state.openLinks.links,
     }),
   },
   methods: {
-    buildUrlTitle (url) {
-      return `${url.title} (${url.to})`;
+    buildUrlTitle (link) {
+      return `${link.title} (${link.to})`;
     },
   },
 };

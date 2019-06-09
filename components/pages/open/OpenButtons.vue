@@ -39,12 +39,12 @@ export default {
   name: 'OpenButtons',
   computed: {
     ...mapState({
-      urls: state => state.openUrls.urls,
+      links: state => state.openLinks.links,
     }),
     ...mapGetters({
-      reversedUrls: 'openUrls/reversedUrls',
-      exceptedUrls: 'openUrls/exceptedUrls',
-      exceptedReversedUrls: 'openUrls/exceptedReversedUrls',
+      reversedLinks: 'openLinks/reversedLinks',
+      exceptedLinks: 'openLinks/exceptedLinks',
+      exceptedReversedLinks: 'openLinks/exceptedReversedLinks',
     }),
     buttonClass () {
       return 'button is-medium is-danger is-rounded has-text-warning';
@@ -53,23 +53,23 @@ export default {
   methods: {
     openNormal () {
       this
-        .urls
-        .forEach(url => window.open(url.to, '_blank'));
+        .links
+        .forEach(link => window.open(link.to, '_blank'));
     },
     openReverse () {
       this
-        .reversedUrls
-        .forEach(url => window.open(url.to, '_blank'));
+        .reversedLinks
+        .forEach(link => window.open(link.to, '_blank'));
     },
     openExceptNormal () {
       this
-        .exceptedUrls
-        .forEach(url => window.open(url.to, '_blank'));
+        .exceptedLinks
+        .forEach(link => window.open(link.to, '_blank'));
     },
     openExceptedReverse () {
       this
-        .exceptedReversedUrls
-        .forEach(url => window.open(url.to, '_blank'));
+        .exceptedReversedLinks
+        .forEach(link => window.open(link.to, '_blank'));
     },
   },
 };

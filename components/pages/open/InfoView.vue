@@ -1,7 +1,7 @@
 <template>
   <div>
-    <p>Total urls : {{ urlsCount }}</p>
-    <p>Excepted urls : {{ exceptedUrlsCount }}</p>
+    <p>Total links : {{ linksCount }}</p>
+    <p>Excepted links : {{ exceptedLinksCount }}</p>
     <p>Normal : {{ normalBrowsersText }}</p>
     <p>Reverse : {{ reverseBrowsersText }}</p>
   </div>
@@ -14,8 +14,8 @@ export default {
   name: 'InfoView',
   computed: {
     ...mapGetters({
-      urlsCount: 'openUrls/urlsCount',
-      exceptedUrlsCount: 'openUrls/exceptedUrlsCount',
+      linksCount: 'openLinks/linksCount',
+      exceptedLinksCount: 'openLinks/exceptedLinksCount',
     }),
     joinSeparator () {
       return ', ';

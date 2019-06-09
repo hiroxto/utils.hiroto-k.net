@@ -1,5 +1,5 @@
 export const state = () => ({
-  urls: [
+  links: [
     {
       title: '運用情報',
       to: 'https://loo-ool.com/rail/',
@@ -144,19 +144,19 @@ export const state = () => ({
 });
 
 export const getters = {
-  urlsCount (state) {
-    return state.urls.length;
+  linksCount (state) {
+    return state.links.length;
   },
-  reversedUrls (state) {
-    return state.urls.slice(0).reverse();
+  reversedLinks (state) {
+    return state.links.slice(0).reverse();
   },
-  exceptedUrls (state) {
-    return state.urls.filter(url => !url.except);
+  exceptedLinks (state) {
+    return state.links.filter(link => !link.except);
   },
-  exceptedReversedUrls (state, getters) {
-    return getters.exceptedUrls.slice(0).reverse();
+  exceptedReversedLinks (state, getters) {
+    return getters.exceptedLinks.slice(0).reverse();
   },
-  exceptedUrlsCount (state, getters) {
-    return getters.exceptedUrls.length;
+  exceptedLinksCount (state, getters) {
+    return getters.exceptedLinks.length;
   },
 };
