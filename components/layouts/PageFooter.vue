@@ -4,14 +4,12 @@
       <div class="content">
         <div class="columns">
           <div class="column">
-            <p class="footer-column-title">
-              © 2019 root-80
+            <p v-text="footerTitle" class="footer-column-title">
             </p>
           </div>
 
           <div class="column">
-            <p class="footer-column-title">
-              Page links
+            <p v-text="footerLinksTitle" class="footer-column-title">
             </p>
             <p
               v-for="(pageLink, allPageLinksKey) in allPageLinks"
@@ -42,6 +40,12 @@ export default {
     ...mapGetters({
       allPageLinks: 'pageLinks/allPageLinks',
     }),
+    footerTitle () {
+      return '© 2019 root-80';
+    },
+    footerLinksTitle () {
+      return 'Page links';
+    },
   },
 };
 </script>
