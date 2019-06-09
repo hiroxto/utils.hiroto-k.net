@@ -13,16 +13,16 @@
       <open-buttons>
       </open-buttons>
 
-      <urls-list>
-      </urls-list>
+      <links-list>
+      </links-list>
     </div>
   </section>
 </template>
 
 <script>
 import InfoView from '~/components/pages/open/InfoView';
+import LinksList from '~/components/pages/open/LinksList';
 import OpenButtons from '~/components/pages/open/OpenButtons';
-import UrlsList from '~/components/pages/open/UrlsList';
 
 export default {
   head () {
@@ -35,8 +35,8 @@ export default {
   },
   components: {
     InfoView,
+    LinksList,
     OpenButtons,
-    UrlsList,
   },
   computed: {
     title () {

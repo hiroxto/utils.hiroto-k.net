@@ -20,7 +20,7 @@
 import { mapState } from 'vuex';
 
 export default {
-  name: 'UrlsList',
+  name: 'LinksList',
   computed: {
     ...mapState({
       urls: state => state.openUrls.urls,
