@@ -2,8 +2,8 @@
   <div>
     <p>Total links : {{ linksCount }}</p>
     <p>Excepted links : {{ exceptedLinksCount }}</p>
-    <p>Normal : {{ normalBrowsersText }}</p>
-    <p>Reverse : {{ reverseBrowsersText }}</p>
+    <p>Normal : {{ normalBrowsers }}</p>
+    <p>Reverse : {{ reverseBrowsers }}</p>
   </div>
 </template>
 
@@ -24,18 +24,12 @@ export default {
       return [
         'PC Chrome',
         'Mobile Firefox',
-      ];
-    },
-    normalBrowsersText () {
-      return this.normalBrowsers.join(this.joinSeparator);
+      ].join(this.joinSeparator);
     },
     reverseBrowsers () {
       return [
         'PC Firefox',
-      ];
-    },
-    reverseBrowsersText () {
-      return this.reverseBrowsers.join(this.joinSeparator);
+      ].join(this.joinSeparator);
     },
   },
 };
