@@ -54,22 +54,22 @@ export default {
     openNormal () {
       this
         .urls
-        .forEach(url => window.open(url.url, '_blank'));
+        .forEach(url => window.open(url.to, '_blank'));
     },
     openReverse () {
       this
         .reversedUrls
-        .forEach(url => window.open(url.url, '_blank'));
+        .forEach(url => window.open(url.to, '_blank'));
     },
     openExceptNormal () {
       this
         .exceptedUrls
-        .forEach(url => window.open(url.url, '_blank'));
+        .forEach(url => window.open(url.to, '_blank'));
     },
     openExceptedReverse () {
       this
         .exceptedReversedUrls
-        .forEach(url => window.open(url.url, '_blank'));
+        .forEach(url => window.open(url.to, '_blank'));
     },
   },
 };

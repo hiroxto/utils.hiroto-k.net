@@ -5,7 +5,7 @@
       :key="urlsKey"
     >
       <a
-        :href="url.url"
+        :href="url.to"
         :title="buildUrlTitle(url)"
         v-text="buildUrlTitle(url)"
         target="_blank"
@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     buildUrlTitle (url) {
-      return `${url.name} (${url.url})`;
+      return `${url.title} (${url.to})`;
     },
   },
 };
