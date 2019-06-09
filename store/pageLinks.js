@@ -3,8 +3,8 @@ export const state = () => ({
     title: 'Top page',
     to: '/',
   },
-  openUrlsPageLink: {
-    title: 'Open urls',
+  openLinksPageLink: {
+    title: 'Open links',
     to: '/open',
   },
   trainNumberPageLink: {
@@ -25,13 +25,13 @@ export const getters = {
   allPageLinks (state) {
     return [
       state.topPageLink,
-      state.openUrlsPageLink,
+      state.openLinksPageLink,
       state.trainNumberPageLink,
     ];
   },
   pageLinks (state) {
     return [
-      state.openUrlsPageLink,
+      state.openLinksPageLink,
       state.trainNumberPageLink,
     ];
   },
