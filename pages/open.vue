@@ -40,10 +40,10 @@ export default {
   },
   computed: {
     title () {
-      return 'Open urls';
+      return 'Open links';
     },
     description () {
-      return 'Open the urls.';
+      return 'Open the links.';
     },
   },
 };
