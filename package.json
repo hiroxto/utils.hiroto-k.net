@@ -20,6 +20,7 @@
     "ts-node": "^8.3.0"
   },
   "devDependencies": {
+    "@types/marked": "^0.6.5",
     "babel-eslint": "^10.0.2",
     "eslint": "^6.1.0",
     "eslint-config-standard": "^13.0.1",
