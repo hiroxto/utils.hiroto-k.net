@@ -20,7 +20,9 @@
 </template>
 
 <script lang="ts">
-export default {
+import Vue from 'vue';
+
+export default Vue.extend({
   name: 'LinksMenu',
   props: {
     links: {
@@ -29,10 +31,10 @@ export default {
     },
     label: {
       type: String,
-      default () {
+      default (): string {
         return 'pages';
       },
     },
   },
-};
+});
 </script>

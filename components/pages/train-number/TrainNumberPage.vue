@@ -4,9 +4,10 @@
 </template>
 
 <script lang="ts">
+import Vue from 'vue';
 import MarkDownOnlyContent from '~/components/MarkDownOnlyContent';
 
-export default {
+export default Vue.extend({
   name: 'TrainNumberPage',
   components: {
     MarkDownOnlyContent,
@@ -20,15 +21,15 @@ export default {
     };
   },
   computed: {
-    title () {
+    title (): string {
       return 'title';
     },
-    description () {
+    description (): string {
       return `列車番号メモ ${this.title}`;
     },
-    source () {
+    source (): string {
       return '';
     },
   },
-};
+});
 </script>

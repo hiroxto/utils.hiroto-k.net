@@ -14,10 +14,11 @@
 </template>
 
 <script lang="ts">
+import Vue from 'vue';
 import LinksMenu from '~/components/ui/LinksMenu';
-import { mapGetters } from 'vuex';
+import { Link } from '~/types';
 
-export default {
+export default Vue.extend({
   head () {
     return {
       title: this.title,
@@ -30,15 +31,15 @@ export default {
     LinksMenu,
   },
   computed: {
-    ...mapGetters({
-      trainNumberContentPageLinks: 'pageLinks/trainNumberContentPageLinks',
-    }),
-    title () {
+    trainNumberContentPageLinks (): Link[] {
+      return this.$store.getters['pageLinks/trainNumberContentPageLinks'];
+    },
+    title (): string {
       return '列車番号メモ';
     },
-    description () {
+    description (): string {
       return '入出場,車輪転削などの予定臨や、パターンが概ね決まっている臨工や臨単の列車番号のメモ。';
     },
   },
-};
+});
 </script>

@@ -4,9 +4,10 @@
 </template>
 
 <script lang="ts">
+import Vue from 'vue';
 import marked from 'marked';
 
-export default {
+export default Vue.extend({
   name: 'MarkDownContent',
   props: {
     source: {
@@ -15,9 +16,9 @@ export default {
     },
   },
   computed: {
-    markedContent () {
+    markedContent (): string {
       return marked(this.source);
     },
   },
-};
+});
 </script>
