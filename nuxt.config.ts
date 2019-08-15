@@ -1,4 +1,6 @@
-module.exports = {
+import NuxtConfiguration from '@nuxt/config';
+
+const nuxtConfig: NuxtConfiguration = {
   mode: 'universal',
 
   /*
@@ -69,3 +71,5 @@ module.exports = {
     },
   },
 };
+
+module.exports = nuxtConfig;
