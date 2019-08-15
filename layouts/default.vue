@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import PageFooter from '~/components/layouts/PageFooter';
 
 export default {

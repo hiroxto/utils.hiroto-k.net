@@ -32,7 +32,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { mapState, mapGetters } from 'vuex';
 
 export default {

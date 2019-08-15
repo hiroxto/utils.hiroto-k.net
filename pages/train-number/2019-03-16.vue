@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 import TrainNumberPage from '~/components/pages/train-number/TrainNumberPage';
 import contentSource from '~/assets/train-number/2019-03-16.md';
 

@@ -3,7 +3,7 @@
   </mark-down-only-content>
 </template>
 
-<script>
+<script lang="ts">
 import MarkDownOnlyContent from '~/components/MarkDownOnlyContent';
 
 export default {

@@ -13,7 +13,7 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
 import LinksMenu from '~/components/ui/LinksMenu';
 import { mapGetters } from 'vuex';
 

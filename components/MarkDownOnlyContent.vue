@@ -9,7 +9,7 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
 import MarkDownContent from '~/components/MarkDownContent';
 
 export default {

@@ -19,7 +19,7 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
 import InfoView from '~/components/pages/open/InfoView';
 import LinksList from '~/components/pages/open/LinksList';
 import OpenButtons from '~/components/pages/open/OpenButtons';
