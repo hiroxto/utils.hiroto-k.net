@@ -29,5 +29,6 @@
       "@types/node",
       "@nuxt/vue-app"
     ]
-  }
+  },
+  "files": ["./sfc.d.ts"]
 }
