@@ -33,5 +33,7 @@
       "@nuxt/vue-app"
     ]
   },
-  "files": ["./sfc.d.ts"]
+  "files": [
+    "./types/sfc.d.ts"
+  ]
 }
