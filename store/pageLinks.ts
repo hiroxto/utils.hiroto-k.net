@@ -1,4 +1,7 @@
-export const state = () => ({
+import { Link, PageLinksState, RootState } from '~/types';
+import { GetterTree } from 'vuex';
+
+export const state = (): PageLinksState => ({
   topPageLink: {
     title: 'Top page',
     to: '/',
@@ -21,21 +24,21 @@ export const state = () => ({
   },
 });
 
-export const getters = {
-  allPageLinks (state) {
+export const getters: GetterTree<PageLinksState, RootState> = {
+  allPageLinks (state: PageLinksState): Link[] {
     return [
       state.topPageLink,
       state.openLinksPageLink,
       state.trainNumberPageLink,
     ];
   },
-  pageLinks (state) {
+  pageLinks (state: PageLinksState): Link[] {
     return [
       state.openLinksPageLink,
       state.trainNumberPageLink,
     ];
   },
-  trainNumberContentPageLinks (state) {
+  trainNumberContentPageLinks (state: PageLinksState): Link[] {
     return [
       state.trainNumber20180317PageLink,
       state.trainNumber20190316PageLink,

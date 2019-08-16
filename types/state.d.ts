@@ -1,5 +1,10 @@
 import { Link, OpenLink } from './index';
 
+export interface RootState {
+  pageLinks: PageLinksState;
+  openLinks: OpenLinksState;
+}
+
 export interface PageLinksState {
   topPageLink: Link;
   openLinksPageLink: Link;
