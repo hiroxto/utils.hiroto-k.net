@@ -1,18 +1,20 @@
 module.exports = {
   root: true,
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: '@typescript-eslint/parser',
   },
   env: {
     browser: true,
     node: true,
   },
   extends: [
+    'plugin:@typescript-eslint/recommended',
     'plugin:vue/strongly-recommended',
     'plugin:promise/recommended',
     'standard',
   ],
   plugins: [
+    '@typescript-eslint',
     'vue',
     'promise',
   ],
