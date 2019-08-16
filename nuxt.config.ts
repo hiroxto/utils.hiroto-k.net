@@ -53,7 +53,7 @@ const nuxtConfig: NuxtConfiguration = {
   build: {
     extractCSS: true,
 
-    extend (config, { isDev, isClient }) {
+    extend (config, { isDev, isClient }): void {
       config.module.rules.push({
         test: /\.md$/,
         loader: 'raw-loader',
