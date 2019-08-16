@@ -33,6 +33,8 @@ module.exports = {
     'vue/max-attributes-per-line': ['error', { singleline: 2 }],
     'vue/this-in-template': ['error'],
     'promise/catch-or-return': ['error', { allowThen: true, terminationMethod: ['catch', 'asCallback', 'finally'] }],
+    '@typescript-eslint/array-type': ['error', { default: 'array' }],
+    '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
   },
   overrides: [
     {
