@@ -1,4 +1,7 @@
-export const state = () => ({
+import { OpenLink, OpenLinksState, RootState } from '~/types';
+import { GetterTree } from 'vuex';
+
+export const state = (): OpenLinksState => ({
   links: [
     {
       title: '運用情報',
@@ -143,20 +146,20 @@ export const state = () => ({
   ],
 });
 
-export const getters = {
-  linksCount (state) {
+export const getters: GetterTree<OpenLinksState, RootState> = {
+  linksCount (state: OpenLinksState): number {
     return state.links.length;
   },
-  reversedLinks (state) {
+  reversedLinks (state: OpenLinksState): OpenLink[] {
     return state.links.slice(0).reverse();
   },
-  exceptedLinks (state) {
+  exceptedLinks (state: OpenLinksState): OpenLink[] {
     return state.links.filter(link => !link.except);
   },
-  exceptedReversedLinks (state, getters) {
+  exceptedReversedLinks (state: OpenLinksState, getters): OpenLink[] {
     return getters.exceptedLinks.slice(0).reverse();
   },
-  exceptedLinksCount (state, getters) {
+  exceptedLinksCount (state: OpenLinksState, getters): number {
     return getters.exceptedLinks.length;
   },
 };

@@ -7,30 +7,32 @@
   </div>
 </template>
 
-<script>
-import { mapGetters } from 'vuex';
+<script lang="ts">
+import Vue from 'vue';
 
-export default {
+export default Vue.extend({
   name: 'InfoView',
   computed: {
-    ...mapGetters({
-      linksCount: 'openLinks/linksCount',
-      exceptedLinksCount: 'openLinks/exceptedLinksCount',
-    }),
-    joinSeparator () {
+    linksCount (): number {
+      return this.$store.getters['openLinks/linksCount'];
+    },
+    exceptedLinksCount (): number {
+      return this.$store.getters['openLinks/exceptedLinksCount'];
+    },
+    joinSeparator (): string {
       return ', ';
     },
-    normalBrowsers () {
+    normalBrowsers (): string {
       return [
         'PC Chrome',
         'Mobile Firefox',
       ].join(this.joinSeparator);
     },
-    reverseBrowsers () {
+    reverseBrowsers (): string {
       return [
         'PC Firefox',
       ].join(this.joinSeparator);
     },
   },
-};
+});
 </script>

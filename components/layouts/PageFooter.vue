@@ -31,23 +31,24 @@
   </footer>
 </template>
 
-<script>
-import { mapGetters } from 'vuex';
+<script lang="ts">
+import Vue from 'vue';
+import { Link } from '~/types';
 
-export default {
+export default Vue.extend({
   name: 'PageFooter',
   computed: {
-    ...mapGetters({
-      allPageLinks: 'pageLinks/allPageLinks',
-    }),
-    footerTitle () {
+    allPageLinks (): Link[] {
+      return this.$store.getters['pageLinks/allPageLinks'];
+    },
+    footerTitle (): string {
       return '© 2019 root-80';
     },
-    footerLinksTitle () {
+    footerLinksTitle (): string {
       return 'Page links';
     },
   },
-};
+});
 </script>
 
 <style scoped>

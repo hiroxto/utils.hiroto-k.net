@@ -19,12 +19,13 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue';
 import InfoView from '~/components/pages/open/InfoView';
 import LinksList from '~/components/pages/open/LinksList';
 import OpenButtons from '~/components/pages/open/OpenButtons';
 
-export default {
+export default Vue.extend({
   head () {
     return {
       title: this.title,
@@ -39,12 +40,12 @@ export default {
     OpenButtons,
   },
   computed: {
-    title () {
+    title (): string {
       return 'Open links';
     },
-    description () {
+    description (): string {
       return 'Open the links.';
     },
   },
-};
+});
 </script>

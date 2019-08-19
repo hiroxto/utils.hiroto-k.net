@@ -6,5 +6,5 @@ export interface Link {
 }
 
 export interface OpenLink extends Link {
-  except: boolean,
+  except: boolean;
 }

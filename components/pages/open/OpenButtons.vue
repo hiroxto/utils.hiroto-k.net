@@ -32,47 +32,52 @@
   </div>
 </template>
 
-<script>
-import { mapState, mapGetters } from 'vuex';
+<script lang="ts">
+import Vue from 'vue';
+import { OpenLink } from '~/types';
 
-export default {
+export default Vue.extend({
   name: 'OpenButtons',
   computed: {
-    ...mapState({
-      links: state => state.openLinks.links,
-    }),
-    ...mapGetters({
-      reversedLinks: 'openLinks/reversedLinks',
-      exceptedLinks: 'openLinks/exceptedLinks',
-      exceptedReversedLinks: 'openLinks/exceptedReversedLinks',
-    }),
-    buttonClass () {
+    links (): OpenLink[] {
+      return this.$store.state.openLinks.links;
+    },
+    reversedLinks (): OpenLink[] {
+      return this.$store.getters['openLinks/reversedLinks'];
+    },
+    exceptedLinks (): OpenLink[] {
+      return this.$store.getters['openLinks/exceptedLinks'];
+    },
+    exceptedReversedLinks (): OpenLink[] {
+      return this.$store.getters['openLinks/exceptedReversedLinks'];
+    },
+    buttonClass (): string {
       return 'button is-medium is-danger is-rounded has-text-warning';
     },
   },
   methods: {
-    openNormal () {
+    openNormal (): void {
       this
         .links
         .forEach(link => window.open(link.to, '_blank'));
     },
-    openReverse () {
+    openReverse (): void {
       this
         .reversedLinks
         .forEach(link => window.open(link.to, '_blank'));
     },
-    openExceptNormal () {
+    openExceptNormal (): void {
       this
         .exceptedLinks
         .forEach(link => window.open(link.to, '_blank'));
     },
-    openExceptedReverse () {
+    openExceptedReverse (): void {
       this
         .exceptedReversedLinks
         .forEach(link => window.open(link.to, '_blank'));
     },
   },
-};
+});
 </script>
 
 <style scoped>

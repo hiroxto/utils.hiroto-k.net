@@ -9,10 +9,11 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue';
 import MarkDownContent from '~/components/MarkDownContent';
 
-export default {
+export default Vue.extend({
   name: 'MarkDownOnlyContent',
   props: {
     source: {
@@ -23,5 +24,5 @@ export default {
   components: {
     MarkDownContent,
   },
-};
+});
 </script>

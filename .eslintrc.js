@@ -1,18 +1,20 @@
 module.exports = {
   root: true,
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: '@typescript-eslint/parser',
   },
   env: {
     browser: true,
     node: true,
   },
   extends: [
+    'plugin:@typescript-eslint/recommended',
     'plugin:vue/strongly-recommended',
     'plugin:promise/recommended',
     'standard',
   ],
   plugins: [
+    '@typescript-eslint',
     'vue',
     'promise',
   ],
@@ -31,6 +33,8 @@ module.exports = {
     'vue/max-attributes-per-line': ['error', { singleline: 2 }],
     'vue/this-in-template': ['error'],
     'promise/catch-or-return': ['error', { allowThen: true, terminationMethod: ['catch', 'asCallback', 'finally'] }],
+    '@typescript-eslint/array-type': ['error', { default: 'array' }],
+    '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
   },
   overrides: [
     {

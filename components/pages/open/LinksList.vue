@@ -16,20 +16,21 @@
   </ul>
 </template>
 
-<script>
-import { mapState } from 'vuex';
+<script lang="ts">
+import Vue from 'vue';
+import { OpenLink } from '~/types';
 
-export default {
+export default Vue.extend({
   name: 'LinksList',
   computed: {
-    ...mapState({
-      links: state => state.openLinks.links,
-    }),
+    links (): OpenLink[] {
+      return this.$store.state.openLinks.links;
+    },
   },
   methods: {
-    buildUrlTitle (link) {
+    buildUrlTitle (link: OpenLink): string {
       return `${link.title} (${link.to})`;
     },
   },
-};
+});
 </script>

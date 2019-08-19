@@ -13,11 +13,12 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue';
 import LinksMenu from '~/components/ui/LinksMenu';
-import { mapGetters } from 'vuex';
+import { Link } from '~/types';
 
-export default {
+export default Vue.extend({
   head () {
     return {
       title: this.title,
@@ -31,15 +32,15 @@ export default {
     LinksMenu,
   },
   computed: {
-    ...mapGetters({
-      pageLinks: 'pageLinks/pageLinks',
-    }),
-    title () {
+    pageLinks (): Link[] {
+      return this.$store.getters['pageLinks/pageLinks'];
+    },
+    title (): string {
       return 'root-80.cf';
     },
-    description () {
+    description (): string {
       return 'Utility site for me.';
     },
   },
-};
+});
 </script>

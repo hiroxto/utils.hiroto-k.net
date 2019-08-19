@@ -9,14 +9,15 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue';
 import PageFooter from '~/components/layouts/PageFooter';
 
-export default {
+export default Vue.extend({
   components: {
     PageFooter,
   },
-};
+});
 </script>
 
 <style scoped>
