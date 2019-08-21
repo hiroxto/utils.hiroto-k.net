@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue, { PropOptions } from 'vue';
 import MarkDownContent from '~/components/MarkDownContent';
 
 export default Vue.extend({
@@ -19,7 +19,7 @@ export default Vue.extend({
     source: {
       required: true,
       type: String,
-    },
+    } as PropOptions<string>,
   },
   components: {
     MarkDownContent,
