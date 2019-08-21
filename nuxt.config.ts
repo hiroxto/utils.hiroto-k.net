@@ -47,6 +47,10 @@ const nuxtConfig: NuxtConfiguration = {
     }],
   ],
 
+  buildModules: [
+    '@nuxt/typescript-build',
+  ],
+
   /*
   ** Build configuration
   */
