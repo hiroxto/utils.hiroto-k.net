@@ -1,10 +1,10 @@
-# root-80.cf
+# utils.hiroto-k.net
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/dc89336d-c4fd-4cc1-a45c-5fa534dc2eb5/deploy-status)](https://app.netlify.com/sites/root-80/deploys)
 
 Utility site for me.
 
-[root-80.cf](https://root-80.cf)
+[utils.hiroto-k.net](https://utils.hiroto-k.net)
 
 ## Build Setup
 
