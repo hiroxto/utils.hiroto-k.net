@@ -7,7 +7,7 @@ const nuxtConfig: NuxtConfiguration = {
   ** Headers of the page
   */
   head: {
-    titleTemplate: '%s | root-80.cf',
+    titleTemplate: '%s | utils.hiroto-k.net',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
