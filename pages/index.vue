@@ -36,7 +36,7 @@ export default Vue.extend({
       return this.$store.getters['pageLinks/pageLinks'];
     },
     title (): string {
-      return 'utils.hiroto-k.net￿';
+      return 'utils.hiroto-k.net';
     },
     description (): string {
       return 'Utility site for me.';
