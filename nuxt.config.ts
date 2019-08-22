@@ -11,7 +11,6 @@ const nuxtConfig: NuxtConfiguration = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'robots', content: 'noindex, nofollow, noarchive' },
       { hid: 'description', name: 'description', content: 'Generic description.' },
     ],
     link: [
