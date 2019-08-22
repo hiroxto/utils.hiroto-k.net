@@ -4,7 +4,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue, { PropOptions } from 'vue';
 import marked from 'marked';
 
 export default Vue.extend({
@@ -13,7 +13,7 @@ export default Vue.extend({
     source: {
       required: true,
       type: String,
-    },
+    } as PropOptions<string>,
   },
   computed: {
     markedContent (): string {

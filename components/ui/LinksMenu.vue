@@ -20,7 +20,8 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue, { PropOptions } from 'vue';
+import { Link } from '~/types';
 
 export default Vue.extend({
   name: 'LinksMenu',
@@ -28,7 +29,7 @@ export default Vue.extend({
     links: {
       required: true,
       type: Array,
-    },
+    } as PropOptions<Link>,
     label: {
       type: String,
       default (): string {
