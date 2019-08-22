@@ -42,7 +42,7 @@ export default Vue.extend({
       return this.$store.getters['pageLinks/allPageLinks'];
     },
     footerTitle (): string {
-      return '© 2019 root-80';
+      return '© 2019 hiroto-k';
     },
     footerLinksTitle (): string {
       return 'Page links';
