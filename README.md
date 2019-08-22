@@ -1,6 +1,6 @@
 # utils.hiroto-k.net
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/dc89336d-c4fd-4cc1-a45c-5fa534dc2eb5/deploy-status)](https://app.netlify.com/sites/root-80/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d63c4173-f731-40c0-bfae-00d2f5276ee1/deploy-status)](https://app.netlify.com/sites/utils-hiroto-k/deploys)
 
 Utility site for me.
 
