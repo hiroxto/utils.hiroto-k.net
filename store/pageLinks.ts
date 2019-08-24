@@ -11,7 +11,7 @@ export const state = (): PageLinksState => ({
     to: '/open',
   },
   trainNumberPageLink: {
-    title: 'Train number',
+    title: '列車番号メモ',
     to: '/train-number',
   },
   trainNumber20180317PageLink: {
