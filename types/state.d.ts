@@ -11,6 +11,7 @@ export interface PageLinksState {
   trainNumberPageLink: Link;
   trainNumber20180317PageLink: Link;
   trainNumber20190316PageLink: Link;
+  trainNumberCalcPageLink: Link;
 }
 
 export interface OpenLinksState {
