@@ -35,7 +35,7 @@ export default Vue.extend({
       default (): string {
         return 'pages';
       },
-    },
+    } as PropOptions<string>,
   },
 });
 </script>
