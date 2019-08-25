@@ -7,6 +7,9 @@
       <h2 class="subtitle" v-text="description">
       </h2>
 
+      <number-calc>
+      </number-calc>
+
       <how-to-calc>
       </how-to-calc>
     </div>
@@ -15,6 +18,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import NumberCalc from '~/components/pages/train-number-calc/NumberCalc';
 import HowToCalc from '~/components/pages/train-number-calc/HowToCalc';
 
 export default Vue.extend({
@@ -27,6 +31,7 @@ export default Vue.extend({
     };
   },
   components: {
+    NumberCalc,
     HowToCalc,
   },
   computed: {
