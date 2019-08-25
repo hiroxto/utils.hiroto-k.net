@@ -6,12 +6,16 @@
 
       <h2 class="subtitle" v-text="description">
       </h2>
+
+      <how-to-calc>
+      </how-to-calc>
     </div>
   </section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import HowToCalc from '~/components/pages/train-number-calc/HowToCalc';
 
 export default Vue.extend({
   head () {
@@ -23,6 +27,7 @@ export default Vue.extend({
     };
   },
   components: {
+    HowToCalc,
   },
   computed: {
     title (): string {
