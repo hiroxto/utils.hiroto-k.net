@@ -12,6 +12,7 @@ export interface PageLinksState {
   trainNumber20180317PageLink: Link;
   trainNumber20190316PageLink: Link;
   trainNumberCalcPageLink: Link;
+  qrCodeGeneratorPageLink: Link;
 }
 
 export interface OpenLinksState {
