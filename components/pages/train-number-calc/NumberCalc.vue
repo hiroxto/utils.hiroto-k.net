@@ -10,6 +10,7 @@
         <div class="control">
           <input
             v-model="trainNumber"
+            :class="getInputClass(errors)"
             class="input"
             type="text"
             placeholder="列車番号を入力"
@@ -99,6 +100,9 @@ export default Vue.extend({
     },
   },
   methods: {
+    getInputClass (errors: string[]): string {
+      return errors.length === 0 ? 'is-success' : 'is-danger';
+    },
     getPassengerType (): string|null {
       const splitNumber = this.splitNumber;
       const isSpecial = this.isPassengerSpecial;
