@@ -23,12 +23,14 @@
       </validation-provider>
     </div>
 
-    <span
+    <b-tag
       v-if="isRenderTrainType"
       v-text="trainType"
-      class="tag is-info is-large is-rounded"
+      type="is-info"
+      size="is-large"
+      rounded
     >
-    </span>
+    </b-tag>
   </div>
 </template>
 
