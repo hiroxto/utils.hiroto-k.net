@@ -29,13 +29,13 @@ export default Vue.extend({
     links: {
       required: true,
       type: Array,
-    } as PropOptions<Link>,
+    } as PropOptions<Link[]>,
     label: {
       type: String,
       default (): string {
         return 'pages';
       },
-    },
+    } as PropOptions<string>,
   },
 });
 </script>
