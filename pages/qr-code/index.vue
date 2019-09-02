@@ -9,61 +9,20 @@
 
       <div class="content">
         <div class="qr-setting-fields">
-          <b-field label="埋め込む値">
-            <b-input
-              v-model="value"
-              placeholder="値を入力"
-            >
-            </b-input>
-          </b-field>
+          <value-field>
+          </value-field>
 
-          <b-field label="サイズ">
-            <b-slider
-              v-model="size"
-              :min="1"
-              :max="500"
-            >
-              <b-slider-tick
-                v-for="(sliderTickValue, sliderTicksKey) in sliderTicks"
-                :key="sliderTicksKey"
-                :value="sliderTickValue"
-                v-text="sliderTickValue"
-                style="word-break:keep-all;"
-              >
-              </b-slider-tick>
-            </b-slider>
-          </b-field>
+          <size-field>
+          </size-field>
 
-          <b-field label="誤り訂正レベル">
-            <b-select
-              v-model="level"
-              placeholder="誤り訂正レベルを選択"
-            >
-              <option
-                v-for="(errorCorrectionLevel, errorCorrectionLevelsKey) in errorCorrectionLevels"
-                :key="errorCorrectionLevelsKey"
-                :value="errorCorrectionLevel.value"
-                v-text="errorCorrectionLevel.text"
-              >
-              </option>
-            </b-select>
-          </b-field>
+          <error-correction-level-field>
+          </error-correction-level-field>
 
-          <b-field label="背景色">
-            <b-input
-              v-model="backGround"
-              type="color"
-            >
-            </b-input>
-          </b-field>
+          <back-ground-field>
+          </back-ground-field>
 
-          <b-field label="QRコードの色">
-            <b-input
-              v-model="foreGround"
-              type="color"
-            >
-            </b-input>
-          </b-field>
+          <fore-ground-field>
+          </fore-ground-field>
         </div>
 
         <qr-code-vue
@@ -83,11 +42,12 @@
 <script lang="ts">
 import Vue from 'vue';
 import QrCodeVue from 'qrcode.vue';
-
-interface ErrorCorrectionLevel {
-  value: 'L' | 'M' | 'Q' | 'H';
-  text: string;
-}
+import ValueField from '~/components/pages/qr-code/ValueField';
+import SizeField from '~/components/pages/qr-code/SizeField';
+import ErrorCorrectionLevelField from '~/components/pages/qr-code/ErrorCorrectionLevelField';
+import BackGroundField from '~/components/pages/qr-code/BackGroundField';
+import ForeGroundField from '~/components/pages/qr-code/ForeGroundField';
+import { QrCodeErrorCorrectionLevel } from '~/types';
 
 export default Vue.extend({
   head () {
@@ -98,17 +58,13 @@ export default Vue.extend({
       ],
     };
   },
-  data () {
-    return {
-      value: '',
-      size: 250,
-      level: 'H',
-      backGround: '#ffffff',
-      foreGround: '#000000',
-    };
-  },
   components: {
     QrCodeVue,
+    ValueField,
+    SizeField,
+    ErrorCorrectionLevelField,
+    BackGroundField,
+    ForeGroundField,
   },
   computed: {
     title (): string {
@@ -117,16 +73,20 @@ export default Vue.extend({
     description (): string {
       return 'QrCodeを生成。';
     },
-    sliderTicks (): number[] {
-      return [0, 100, 200, 300, 400, 500];
+    value (): string {
+      return this.$store.state.qrCodeGenerator.value;
     },
-    errorCorrectionLevels (): ErrorCorrectionLevel[] {
-      return [
-        { value: 'L', text: 'Level L (7%)' },
-        { value: 'M', text: 'Level M (15%)' },
-        { value: 'Q', text: 'Level Q (25%)' },
-        { value: 'H', text: 'Level H (30%)' },
-      ];
+    size (): number {
+      return this.$store.state.qrCodeGenerator.size;
+    },
+    level (): QrCodeErrorCorrectionLevel {
+      return this.$store.state.qrCodeGenerator.level;
+    },
+    backGround (): string {
+      return this.$store.state.qrCodeGenerator.backGround;
+    },
+    foreGround (): string {
+      return this.$store.state.qrCodeGenerator.foreGround;
     },
   },
 });
