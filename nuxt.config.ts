@@ -59,6 +59,10 @@ const nuxtConfig: NuxtConfiguration = {
   build: {
     extractCSS: true,
 
+    transpile: [
+      'vee-validate/dist/rules',
+    ],
+
     extend (config, { isDev, isClient }): void {
       config.module.rules.push({
         test: /\.md$/,
