@@ -5,7 +5,7 @@
 
 <script lang="ts">
 import Vue, { PropOptions } from 'vue';
-import marked from 'marked';
+import marked, { MarkedOptions } from 'marked';
 
 export default Vue.extend({
   name: 'MarkDownContent',
@@ -14,10 +14,17 @@ export default Vue.extend({
       required: true,
       type: String,
     } as PropOptions<string>,
+    options: {
+      required: false,
+      type: Object,
+      default (): MarkedOptions {
+        return {};
+      },
+    } as PropOptions<MarkedOptions>,
   },
   computed: {
     markedContent (): string {
-      return marked(this.source);
+      return marked(this.source, this.options);
     },
   },
 });
