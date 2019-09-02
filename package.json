@@ -42,7 +42,6 @@
     "raw-loader": "^3.1.0",
     "sass-loader": "^8.0.0",
     "vee-validate": "^3.0.2"
-    "sass-loader": "^8.0.0"
   },
   "browserslist": [
     ">0.25%",
