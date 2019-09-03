@@ -22,6 +22,14 @@ export const state = (): PageLinksState => ({
     title: '2019年3月16日 改正',
     to: '/train-number/2019-03-16',
   },
+  trainNumberCalcPageLink: {
+    title: '列車番号から列車種別を計算',
+    to: '/train-number-calc',
+  },
+  qrCodeGeneratorPageLink: {
+    title: 'QRコード生成',
+    to: '/qr-code',
+  },
 });
 
 export const getters: GetterTree<PageLinksState, RootState> = {
@@ -30,12 +38,16 @@ export const getters: GetterTree<PageLinksState, RootState> = {
       state.topPageLink,
       state.openLinksPageLink,
       state.trainNumberPageLink,
+      state.trainNumberCalcPageLink,
+      state.qrCodeGeneratorPageLink,
     ];
   },
   pageLinks (state: PageLinksState): Link[] {
     return [
       state.openLinksPageLink,
       state.trainNumberPageLink,
+      state.trainNumberCalcPageLink,
+      state.qrCodeGeneratorPageLink,
     ];
   },
   trainNumberContentPageLinks (state: PageLinksState): Link[] {

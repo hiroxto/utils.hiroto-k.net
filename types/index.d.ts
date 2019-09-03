@@ -8,3 +8,5 @@ export interface Link {
 export interface OpenLink extends Link {
   except: boolean;
 }
+
+export type QrCodeErrorCorrectionLevel = 'L' | 'M' | 'Q' | 'H';

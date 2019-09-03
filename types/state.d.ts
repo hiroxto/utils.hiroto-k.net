@@ -1,8 +1,9 @@
-import { Link, OpenLink } from './index';
+import { Link, OpenLink, QrCodeErrorCorrectionLevel } from './index';
 
 export interface RootState {
   pageLinks: PageLinksState;
   openLinks: OpenLinksState;
+  qrCodeGenerator: QrCodeGeneratorState;
 }
 
 export interface PageLinksState {
@@ -11,8 +12,18 @@ export interface PageLinksState {
   trainNumberPageLink: Link;
   trainNumber20180317PageLink: Link;
   trainNumber20190316PageLink: Link;
+  trainNumberCalcPageLink: Link;
+  qrCodeGeneratorPageLink: Link;
 }
 
 export interface OpenLinksState {
   links: OpenLink[];
+}
+
+export interface QrCodeGeneratorState {
+  value: string;
+  size: number;
+  level: QrCodeErrorCorrectionLevel;
+  backGround: string;
+  foreGround: string;
 }
