@@ -68,7 +68,7 @@ export default Vue.extend({
   },
   computed: {
     title (): string {
-      return 'QrCode生成';
+      return 'QRコード生成';
     },
     description (): string {
       return 'QrCodeを生成。';
