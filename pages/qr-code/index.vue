@@ -71,7 +71,7 @@ export default Vue.extend({
       return 'QRコード生成';
     },
     description (): string {
-      return 'QrCodeを生成。';
+      return 'ブラウザでQRコードを生成。';
     },
     value (): string {
       return this.$store.state.qrCodeGenerator.value;
