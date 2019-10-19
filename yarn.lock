@@ -1075,14 +1075,14 @@
     "@types/webpack-dev-middleware" "^2.0.3"
     "@types/webpack-hot-middleware" "^2.16.5"
 
-"@nuxt/typescript-build@0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@nuxt/typescript-build/-/typescript-build-0.3.1.tgz#b61d826d3a86e57171e88b392a4e5951eb918c81"
-  integrity sha512-58rFXD0gYUwrdSeuXD8Ewx6eOZzqBrGNb7hqVbxJxLBtFws/WTjdn3+PM3K75wLD6FfNnQkKQeeN6N4q6TwIMA==
+"@nuxt/typescript-build@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@nuxt/typescript-build/-/typescript-build-0.3.2.tgz#5037d64bf2c21c2b440ed931875dafc2ca53ef23"
+  integrity sha512-z73z2dU48UTfE+cl50JIN53GcKsnlNy5e1VC/JQhJG6gS31Z13gR5AKcTBOrF5j5pfL9bmVgWx7gsiO19H2KkQ==
   dependencies:
-    "@nuxt/types" "0.3.1"
+    "@nuxt/types" "0.3.2"
     consola "^2.10.1"
-    fork-ts-checker-webpack-plugin "^1.5.0"
+    fork-ts-checker-webpack-plugin "^1.5.1"
     ts-loader "^6.2.0"
     typescript "~3.6"
 
@@ -4249,10 +4249,10 @@ forever-agent@~0.6.1:
   resolved "https://registry.yarnpkg.com/forever-agent/-/forever-agent-0.6.1.tgz#fbc71f0c41adeb37f96c577ad1ed42d8fdacca91"
   integrity sha1-+8cfDEGt6zf5bFd60e1C2P2sypE=
 
-fork-ts-checker-webpack-plugin@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/fork-ts-checker-webpack-plugin/-/fork-ts-checker-webpack-plugin-1.5.0.tgz#ce1d77190b44d81a761b10b6284a373795e41f0c"
-  integrity sha512-zEhg7Hz+KhZlBhILYpXy+Beu96gwvkROWJiTXOCyOOMMrdBIRPvsBpBqgTI4jfJGrJXcqGwJR8zsBGDmzY0jsA==
+fork-ts-checker-webpack-plugin@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/fork-ts-checker-webpack-plugin/-/fork-ts-checker-webpack-plugin-1.5.1.tgz#f82d078ba8911c7b2c70703ffb3cbe588b33fbaa"
+  integrity sha512-IbVh1Z46dmCXJMg6We8s9jYwCAzzSv2Tgj+G2Sg/8pFantHDBrAg/rQyPnmAWLS/djW7n4VEltoEglbtTvt0wQ==
   dependencies:
     babel-code-frame "^6.22.0"
     chalk "^2.4.1"
