@@ -7,6 +7,8 @@ class TrainNumberCalc {
    */
   protected trainNumber: string;
 
+  protected splitNumber: number[];
+
   /**
    * TrainNumberCalcクラスのコンストラクタ
    *
@@ -14,6 +16,13 @@ class TrainNumberCalc {
    */
   constructor (trainNumber: string) {
     this.trainNumber = trainNumber;
+  }
+
+  /**
+   * 列車番号を1文字ずつに分割したsplitNumberを設定
+   */
+  setSplitNumber (): void {
+    this.splitNumber = this.trainNumber.toString().padStart(4, '0').split('').map(s => parseInt(s));
   }
 }
 
