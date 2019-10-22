@@ -7,6 +7,13 @@ class TrainNumberCalc {
    */
   protected trainNumber: string;
 
+  /**
+   * 列車番号を1文字ずつに分割した値
+   * 4ケタより少ない場合、頭を0で埋める
+   *
+   * 9011の場合 => [9, 0, 1, 1]
+   * 94の場合 => [0, 0, 9, 4]
+   */
   protected splitNumber: number[];
 
   /**
