@@ -2,6 +2,9 @@
  * 列車番号から列車種別を計算するクラス
  */
 class TrainNumberCalc {
+  /**
+   * 計算する列車番号
+   */
   protected trainNumber: string;
 
   /**
