@@ -23,6 +23,7 @@ class TrainNumberCalc {
    */
   constructor (trainNumber: string) {
     this.trainNumber = trainNumber;
+    this.setSplitNumber();
   }
 
   /**
