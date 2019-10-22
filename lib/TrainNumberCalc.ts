@@ -29,7 +29,7 @@ class TrainNumberCalc {
   /**
    * 列車番号を1文字ずつに分割したsplitNumberを設定
    */
-  setSplitNumber (): void {
+  private setSplitNumber (): void {
     this.splitNumber = this.trainNumber.toString().padStart(4, '0').split('').map(s => parseInt(s));
   }
 }
