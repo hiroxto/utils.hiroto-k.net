@@ -62,13 +62,13 @@ class TrainNumberCalc {
 
     if (splitNumber[1] === 0) {
       // 特急客
-      return `${isSpecial ? '臨' : ''}特急客`;
+      return isSpecial ? '臨特急客' : '特急客';
     } else if ((splitNumber[0] !== 0 || splitNumber[1] !== 0) && splitNumber[2] <= 1) {
       // 急客
-      return `${isSpecial ? '臨' : ''}急客`;
+      return isSpecial ? '臨急客' : '急客';
     } else if (splitNumber[1] !== 0 && splitNumber[2] >= 2) {
       // 客
-      return `${isSpecial ? '臨' : ''}客`;
+      return isSpecial ? '臨客' : '客';
     } else {
       return null;
     }
@@ -94,17 +94,22 @@ class TrainNumberCalc {
 
     if (splitNumber[1] === 0) {
       // 高速貨A,B
-      const ab = (splitNumber[2] <= 6) ? 'A' : 'B';
-      return `${isSpecial ? '臨' : ''}高速貨${ab}`;
+      if (splitNumber[2] <= 6) {
+        // 高速貨A
+        return isSpecial ? '臨高速貨A' : '高速貨A';
+      } else {
+        // 高速貨B
+        return isSpecial ? '臨高速貨B' : '高速貨B';
+      }
     } else if ((splitNumber[0] <= 1 || isSpecial) && splitNumber[2] === 5) {
       // 高速貨C
-      return `${isSpecial ? '臨' : ''}高速貨C`;
+      return isSpecial ? '臨高速貨C' : '高速貨C';
     } else if (splitNumber[2] >= 6 && splitNumber[2] <= 8) {
       // 専貨A
-      return `${isSpecial ? '臨' : ''}専貨A`;
+      return isSpecial ? '臨専貨A' : '専貨A';
     } else if (splitNumber[2] === 9) {
       // 専貨B
-      return `${isSpecial ? '臨' : ''}専貨B`;
+      return isSpecial ? '臨専貨B' : '専貨B';
     } else {
       return null;
     }
