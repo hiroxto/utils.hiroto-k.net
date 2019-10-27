@@ -27,6 +27,82 @@ class TrainNumberCalc {
   }
 
   /**
+   * 列車種別を計算
+   */
+  calc (): string|null {
+    if (
+      this.trainNumber === '' ||
+      this.splitNumber.includes(NaN) ||
+      this.splitNumber.length !== 4 ||
+      this.trainNumber.startsWith('0')
+    ) {
+      return null;
+    }
+
+    return this.isPassengerNumber() ? this.getPassengerType() : this.getFreightType();
+  }
+
+  /**
+   * 旅客列車の列車種別計算
+   *
+   * - 桁数が1,2,4桁で、4桁のときの百位が0の場合, 特急客
+   * - 桁数が3,4桁で、百位が0以外かつ、下2桁が00~19の場合、急客
+   * - 桁数が3,4桁で、百位が0以外かつ, 下2桁が20~49の場合、客
+   * - 千位が6以上の場合、種別の頭に 臨 が付く
+   */
+  getPassengerType (): string|null {
+    const splitNumber = this.splitNumber;
+    const isSpecial = this.isPassengerSpecial();
+
+    if (splitNumber[1] === 0) {
+      // 特急客
+      return `${isSpecial ? '臨' : ''}特急客`;
+    } else if ((splitNumber[0] !== 0 || splitNumber[1] !== 0) && splitNumber[2] <= 1) {
+      // 急客
+      return `${isSpecial ? '臨' : ''}急客`;
+    } else if (splitNumber[1] !== 0 && splitNumber[2] >= 2) {
+      // 客
+      return `${isSpecial ? '臨' : ''}客`;
+    } else {
+      return null;
+    }
+  }
+
+  /**
+   * 貨物列車の列車種別計算
+   *
+   * - 千位が0~5で、百位が0の場合、高速貨。下2桁で高速貨Aと高速貨Bに分かれる
+   *     - 下2桁が50~69の場合、高速貨A
+   *     - 下2桁が70~99の場合、高速貨B
+   * - 千位が0,1、百位が1~9、下2桁が50~59の場合、高速貨C
+   * - 千位が1,3,4,5、百位が1~9の場合、専貨。下2桁で専貨Aと専貨Bに分かれる
+   *     - 下2桁が60~89の場合、専貨A
+   *     - 下2桁が90~99の場合、専貨B
+   * - 千位が8以上の場合、種別の頭に 臨 が付く
+   */
+  getFreightType (): string|null {
+    const splitNumber = this.splitNumber;
+    const isSpecial = this.isFreightSpecial();
+
+    if (splitNumber[1] === 0) {
+      // 高速貨A,B
+      const ab = (splitNumber[2] <= 6) ? 'A' : 'B';
+      return `${isSpecial ? '臨' : ''}高速貨${ab}`;
+    } else if ((splitNumber[0] <= 1 || isSpecial) && splitNumber[2] === 5) {
+      // 高速貨C
+      return `${isSpecial ? '臨' : ''}高速貨C`;
+    } else if (splitNumber[2] >= 6 && splitNumber[2] <= 8) {
+      // 専貨A
+      return `${isSpecial ? '臨' : ''}専貨A`;
+    } else if (splitNumber[2] === 9) {
+      // 専貨B
+      return `${isSpecial ? '臨' : ''}専貨B`;
+    } else {
+      return null;
+    }
+  }
+
+  /**
    * 旅客列車かの判別
    *
    * 列車番号の十位が4以下(下2ケタが00~49)の場合は旅客列車
