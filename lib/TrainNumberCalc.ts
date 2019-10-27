@@ -28,6 +28,8 @@ class TrainNumberCalc {
 
   /**
    * 列車種別を計算
+   *
+   * @returns 種別計算が完了した場合は列車種別のstringを、エラーが発生した場合はnullを返す
    */
   calc (): string|null {
     if (
@@ -49,6 +51,8 @@ class TrainNumberCalc {
    * - 桁数が3,4桁で、百位が0以外かつ、下2桁が00~19の場合、急客
    * - 桁数が3,4桁で、百位が0以外かつ, 下2桁が20~49の場合、客
    * - 千位が6以上の場合、種別の頭に 臨 が付く
+   *
+   * @returns 計算した列車種別を返す
    */
   getPassengerType (): string|null {
     const splitNumber = this.splitNumber;
@@ -79,6 +83,8 @@ class TrainNumberCalc {
    *     - 下2桁が60~89の場合、専貨A
    *     - 下2桁が90~99の場合、専貨B
    * - 千位が8以上の場合、種別の頭に 臨 が付く
+   *
+   * @returns 計算した列車種別を返す
    */
   getFreightType (): string|null {
     const splitNumber = this.splitNumber;
