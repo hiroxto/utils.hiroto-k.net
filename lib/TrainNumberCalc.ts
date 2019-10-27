@@ -1,3 +1,5 @@
+import { TrainNumberType } from '~/types';
+
 /**
  * 列車番号から列車種別を計算するクラス
  */
@@ -31,7 +33,7 @@ class TrainNumberCalc {
    *
    * @returns 種別計算が完了した場合は列車種別のstringを、エラーが発生した場合はnullを返す
    */
-  calc (): string|null {
+  calc (): TrainNumberType|null {
     if (
       this.trainNumber === '' ||
       this.splitNumber.includes(NaN) ||
@@ -54,7 +56,7 @@ class TrainNumberCalc {
    *
    * @returns 計算した列車種別を返す
    */
-  getPassengerType (): string|null {
+  getPassengerType (): TrainNumberType|null {
     const splitNumber = this.splitNumber;
     const isSpecial = this.isPassengerSpecial();
 
@@ -86,7 +88,7 @@ class TrainNumberCalc {
    *
    * @returns 計算した列車種別を返す
    */
-  getFreightType (): string|null {
+  getFreightType (): TrainNumberType|null {
     const splitNumber = this.splitNumber;
     const isSpecial = this.isFreightSpecial();
 
