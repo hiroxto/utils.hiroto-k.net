@@ -54,9 +54,13 @@ class TrainNumberCalc {
    * - 桁数が3,4桁で、百位が0以外かつ, 下2桁が20~49の場合、客
    * - 千位が6以上の場合、種別の頭に 臨 が付く
    *
-   * @returns 計算した列車種別を返す
+   * @returns 列車が旅客列車の物の場合、計算した列車種別を返す。列車番号が旅客列車のものではない場合、nullを返す。
    */
   getPassengerType (): TrainNumberType|null {
+    if (!this.isPassengerNumber()) {
+      return null;
+    }
+
     const splitNumber = this.splitNumber;
     const isSpecial = this.isPassengerSpecialNumber();
 
@@ -86,9 +90,13 @@ class TrainNumberCalc {
    *     - 下2桁が90~99の場合、専貨B
    * - 千位が8以上の場合、種別の頭に 臨 が付く
    *
-   * @returns 計算した列車種別を返す
+   * @returns 列車が貨物列車の物の場合、計算した列車種別を返す。列車番号が貨物列車のものではない場合、nullを返す。
    */
   getFreightType (): TrainNumberType|null {
+    if (!this.isFreightNumber()) {
+      return null;
+    }
+
     const splitNumber = this.splitNumber;
     const isSpecial = this.isFreightSpecialNumber();
 
