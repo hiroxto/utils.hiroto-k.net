@@ -56,7 +56,7 @@ class TrainNumberCalc {
    *
    * @returns 列車が旅客列車の物の場合、計算した列車種別を返す。列車番号が旅客列車のものではない場合、nullを返す。
    */
-  getPassengerType (): TrainNumberType|null {
+  private getPassengerType (): TrainNumberType|null {
     if (!this.isPassengerNumber()) {
       return null;
     }
@@ -92,7 +92,7 @@ class TrainNumberCalc {
    *
    * @returns 列車が貨物列車の物の場合、計算した列車種別を返す。列車番号が貨物列車のものではない場合、nullを返す。
    */
-  getFreightType (): TrainNumberType|null {
+  private getFreightType (): TrainNumberType|null {
     if (!this.isFreightNumber()) {
       return null;
     }
