@@ -148,7 +148,7 @@ class TrainNumberCalc {
    * 列車番号の千位が8以上の場合は臨時列車
    */
   isFreightSpecialNumber (): boolean {
-    return this.splitNumber[0] >= 8;
+    return this.isFreightNumber() && this.splitNumber[0] >= 8;
   }
 
   /**
