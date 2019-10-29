@@ -58,7 +58,7 @@ class TrainNumberCalc {
    */
   getPassengerType (): TrainNumberType|null {
     const splitNumber = this.splitNumber;
-    const isSpecial = this.isPassengerSpecial();
+    const isSpecial = this.isPassengerSpecialNumber();
 
     if (splitNumber[1] === 0) {
       // 特急客
@@ -138,7 +138,7 @@ class TrainNumberCalc {
    *
    * 列車番号の千位が6以上の場合は臨時列車
    */
-  isPassengerSpecial (): boolean {
+  isPassengerSpecialNumber (): boolean {
     return this.splitNumber[0] >= 6;
   }
 
