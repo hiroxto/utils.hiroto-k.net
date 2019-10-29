@@ -90,7 +90,7 @@ class TrainNumberCalc {
    */
   getFreightType (): TrainNumberType|null {
     const splitNumber = this.splitNumber;
-    const isSpecial = this.isFreightSpecial();
+    const isSpecial = this.isFreightSpecialNumber();
 
     if (splitNumber[1] === 0) {
       // 高速貨A,B
@@ -147,7 +147,7 @@ class TrainNumberCalc {
    *
    * 列車番号の千位が8以上の場合は臨時列車
    */
-  isFreightSpecial (): boolean {
+  isFreightSpecialNumber (): boolean {
     return this.splitNumber[0] >= 8;
   }
 
