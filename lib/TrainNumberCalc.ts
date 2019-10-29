@@ -139,7 +139,7 @@ class TrainNumberCalc {
    * 列車番号の千位が6以上の場合は臨時列車
    */
   isPassengerSpecialNumber (): boolean {
-    return this.splitNumber[0] >= 6;
+    return this.isPassengerNumber() && this.splitNumber[0] >= 6;
   }
 
   /**
