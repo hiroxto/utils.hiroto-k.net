@@ -25,7 +25,7 @@ class TrainNumberCalc {
    */
   constructor (trainNumber: string) {
     this.trainNumber = trainNumber;
-    this.setSplitNumber();
+    this.splitNumber = this.convertToSplitNumber();
   }
 
   /**
@@ -160,10 +160,12 @@ class TrainNumberCalc {
   }
 
   /**
-   * 列車番号を1文字ずつに分割したsplitNumberを設定
+   * 列車番号を1文字ずつに分割したsplitNumberを返すメソッド
+   *
+   * @returns 長さが4以上の配列を返す
    */
-  private setSplitNumber (): void {
-    this.splitNumber = this.trainNumber.toString().padStart(4, '0').split('').map(s => parseInt(s));
+  private convertToSplitNumber (): number[] {
+    return this.trainNumber.toString().padStart(4, '0').split('').map(s => parseInt(s));
   }
 }
 
