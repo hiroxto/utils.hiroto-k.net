@@ -25,7 +25,7 @@ class TrainNumberCalc {
    */
   constructor (trainNumber: string) {
     this.trainNumber = trainNumber;
-    this.setSplitNumber();
+    this.splitNumber = this.convertToSplitNumber();
   }
 
   /**
@@ -54,11 +54,15 @@ class TrainNumberCalc {
    * - 桁数が3,4桁で、百位が0以外かつ, 下2桁が20~49の場合、客
    * - 千位が6以上の場合、種別の頭に 臨 が付く
    *
-   * @returns 計算した列車種別を返す
+   * @returns 列車が旅客列車の物の場合、計算した列車種別を返す。列車番号が旅客列車のものではない場合、nullを返す。
    */
-  getPassengerType (): TrainNumberType|null {
+  private getPassengerType (): TrainNumberType|null {
+    if (!this.isPassengerNumber()) {
+      return null;
+    }
+
     const splitNumber = this.splitNumber;
-    const isSpecial = this.isPassengerSpecial();
+    const isSpecial = this.isPassengerSpecialNumber();
 
     if (splitNumber[1] === 0) {
       // 特急客
@@ -86,11 +90,15 @@ class TrainNumberCalc {
    *     - 下2桁が90~99の場合、専貨B
    * - 千位が8以上の場合、種別の頭に 臨 が付く
    *
-   * @returns 計算した列車種別を返す
+   * @returns 列車が貨物列車の物の場合、計算した列車種別を返す。列車番号が貨物列車のものではない場合、nullを返す。
    */
-  getFreightType (): TrainNumberType|null {
+  private getFreightType (): TrainNumberType|null {
+    if (!this.isFreightNumber()) {
+      return null;
+    }
+
     const splitNumber = this.splitNumber;
-    const isSpecial = this.isFreightSpecial();
+    const isSpecial = this.isFreightSpecialNumber();
 
     if (splitNumber[1] === 0) {
       // 高速貨A,B
@@ -138,8 +146,8 @@ class TrainNumberCalc {
    *
    * 列車番号の千位が6以上の場合は臨時列車
    */
-  isPassengerSpecial (): boolean {
-    return this.splitNumber[0] >= 6;
+  isPassengerSpecialNumber (): boolean {
+    return this.isPassengerNumber() && this.splitNumber[0] >= 6;
   }
 
   /**
@@ -147,15 +155,17 @@ class TrainNumberCalc {
    *
    * 列車番号の千位が8以上の場合は臨時列車
    */
-  isFreightSpecial (): boolean {
-    return this.splitNumber[0] >= 8;
+  isFreightSpecialNumber (): boolean {
+    return this.isFreightNumber() && this.splitNumber[0] >= 8;
   }
 
   /**
-   * 列車番号を1文字ずつに分割したsplitNumberを設定
+   * 列車番号を1文字ずつに分割したsplitNumberを返すメソッド
+   *
+   * @returns 長さが4以上の配列を返す
    */
-  private setSplitNumber (): void {
-    this.splitNumber = this.trainNumber.toString().padStart(4, '0').split('').map(s => parseInt(s));
+  private convertToSplitNumber (): number[] {
+    return this.trainNumber.toString().padStart(4, '0').split('').map(s => parseInt(s));
   }
 }
 
