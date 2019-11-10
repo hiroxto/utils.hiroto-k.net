@@ -38,7 +38,7 @@
     "marked": "0.7.0",
     "node-sass": "4.13.0",
     "nodemon": "1.19.4",
-    "qrcode.vue": "1.6.3",
+    "qrcode.vue": "1.7.0",
     "raw-loader": "3.1.0",
     "sass-loader": "8.0.0",
     "vee-validate": "3.0.11"
