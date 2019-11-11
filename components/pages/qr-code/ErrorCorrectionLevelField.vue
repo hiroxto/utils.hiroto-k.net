@@ -1,17 +1,24 @@
 <template>
-  <b-field label="誤り訂正レベル">
-    <b-select
-      v-model="level"
-      placeholder="誤り訂正レベルを選択"
-    >
-      <option
+  <b-field>
+    <div class="block">
+      <label class="label">
+        誤り訂正レベル
+      </label>
+
+      <div
         v-for="(errorCorrectionLevel, errorCorrectionLevelsKey) in errorCorrectionLevels"
         :key="errorCorrectionLevelsKey"
-        :value="errorCorrectionLevel.value"
-        v-text="errorCorrectionLevel.text"
+        class="field"
       >
-      </option>
-    </b-select>
+        <b-radio
+          :native-value="errorCorrectionLevel.value"
+          v-model="level"
+          name="name"
+        >
+          {{ errorCorrectionLevel.text }}
+        </b-radio>
+      </div>
+    </div>
   </b-field>
 </template>
 
