@@ -5,6 +5,7 @@ export const state = (): QrCodeGeneratorState => ({
   value: '',
   size: 250,
   level: 'H',
+  renderAs: 'canvas',
   backGround: '#ffffff',
   foreGround: '#000000',
 });
