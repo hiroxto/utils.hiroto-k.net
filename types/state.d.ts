@@ -24,6 +24,7 @@ export interface QrCodeGeneratorState {
   value: string;
   size: number;
   level: QrCodeErrorCorrectionLevel;
+  renderAs: 'canvas'|'svg';
   backGround: string;
   foreGround: string;
 }
