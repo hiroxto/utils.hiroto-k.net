@@ -32,6 +32,7 @@
           :value="value"
           :size="size"
           :level="level"
+          :render-as="renderAs"
           :background="backGround"
           :foreground="foreGround"
           class="qr-code"
@@ -51,7 +52,7 @@ import ErrorCorrectionLevelField from '~/components/pages/qr-code/ErrorCorrectio
 import RenderAsField from '~/components/pages/qr-code/RenderAsField';
 import BackGroundField from '~/components/pages/qr-code/BackGroundField';
 import ForeGroundField from '~/components/pages/qr-code/ForeGroundField';
-import { QrCodeErrorCorrectionLevel } from '~/types';
+import { QrCodeErrorCorrectionLevel, QrCodeRenderAsOptionValue } from '~/types';
 
 export default Vue.extend({
   head () {
@@ -86,6 +87,9 @@ export default Vue.extend({
     },
     level (): QrCodeErrorCorrectionLevel {
       return this.$store.state.qrCodeGenerator.level;
+    },
+    renderAs (): QrCodeRenderAsOptionValue {
+      return this.$store.state.qrCodeGenerator.renderAs;
     },
     backGround (): string {
       return this.$store.state.qrCodeGenerator.backGround;
