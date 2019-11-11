@@ -6,16 +6,16 @@
       </label>
 
       <div
-        v-for="(errorCorrectionLevel, errorCorrectionLevelsKey) in errorCorrectionLevels"
-        :key="errorCorrectionLevelsKey"
+        v-for="(levelForm, levelFormsKey) in levelForms"
+        :key="levelFormsKey"
         class="field"
       >
         <b-radio
-          :native-value="errorCorrectionLevel.value"
+          :native-value="levelForm.value"
           v-model="level"
           name="name"
         >
-          {{ errorCorrectionLevel.text }}
+          {{ levelForm.text }}
         </b-radio>
       </div>
     </div>
@@ -26,7 +26,7 @@
 import Vue from 'vue';
 import { QrCodeErrorCorrectionLevel } from '~/types';
 
-interface ErrorCorrectionLevelSelects {
+interface ErrorCorrectionLevelFormOption {
   value: QrCodeErrorCorrectionLevel;
   text: string;
 }
@@ -42,7 +42,7 @@ export default Vue.extend({
         this.$store.commit('qrCodeGenerator/setLevel', level);
       },
     },
-    errorCorrectionLevels (): ErrorCorrectionLevelSelects[] {
+    levelForms (): ErrorCorrectionLevelFormOption[] {
       return [
         { value: 'L', text: 'Level L (7%)' },
         { value: 'M', text: 'Level M (15%)' },
