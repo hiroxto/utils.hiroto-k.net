@@ -5,27 +5,31 @@
         レンダリング方式
       </label>
 
-      <b-radio
-        v-model="renderAs"
-        name="name"
-        native-value="canvas"
+      <div
+        v-for="(renderAsForm, renderAsFormsKey) in renderAsForms"
+        :key="renderAsFormsKey"
+        class="field"
       >
-        canvas
-      </b-radio>
-
-      <b-radio
-        v-model="renderAs"
-        name="name"
-        native-value="svg"
-      >
-        svg
-      </b-radio>
+        <b-radio
+          :native-value="renderAsForm.value"
+          v-model="renderAs"
+          name="name"
+        >
+          {{ renderAsForm.text }}
+        </b-radio>
+      </div>
     </div>
   </b-field>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import { QrCodeRenderAsOptionValue } from '~/types';
+
+interface RenderAsFormOption {
+  value: QrCodeRenderAsOptionValue;
+  text: string;
+}
 
 export default Vue.extend({
   name: 'RenderAsField',
@@ -37,6 +41,12 @@ export default Vue.extend({
       set (renderAs): void {
         this.$store.commit('qrCodeGenerator/setRenderAs', renderAs);
       },
+    },
+    renderAsForms (): RenderAsFormOption[] {
+      return [
+        { value: 'svg', text: 'SVG' },
+        { value: 'canvas', text: 'Canvas' },
+      ];
     },
   },
 });
