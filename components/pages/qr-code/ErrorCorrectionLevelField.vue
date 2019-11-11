@@ -1,17 +1,24 @@
 <template>
-  <b-field label="誤り訂正レベル">
-    <b-select
-      v-model="level"
-      placeholder="誤り訂正レベルを選択"
-    >
-      <option
-        v-for="(errorCorrectionLevel, errorCorrectionLevelsKey) in errorCorrectionLevels"
-        :key="errorCorrectionLevelsKey"
-        :value="errorCorrectionLevel.value"
-        v-text="errorCorrectionLevel.text"
+  <b-field>
+    <div class="block">
+      <label class="label">
+        誤り訂正レベル
+      </label>
+
+      <div
+        v-for="(levelForm, levelFormsKey) in levelForms"
+        :key="levelFormsKey"
+        class="field"
       >
-      </option>
-    </b-select>
+        <b-radio
+          :native-value="levelForm.value"
+          v-model="level"
+          name="name"
+        >
+          {{ levelForm.text }}
+        </b-radio>
+      </div>
+    </div>
   </b-field>
 </template>
 
@@ -19,7 +26,7 @@
 import Vue from 'vue';
 import { QrCodeErrorCorrectionLevel } from '~/types';
 
-interface ErrorCorrectionLevelSelects {
+interface ErrorCorrectionLevelFormOption {
   value: QrCodeErrorCorrectionLevel;
   text: string;
 }
@@ -35,7 +42,7 @@ export default Vue.extend({
         this.$store.commit('qrCodeGenerator/setLevel', level);
       },
     },
-    errorCorrectionLevels (): ErrorCorrectionLevelSelects[] {
+    levelForms (): ErrorCorrectionLevelFormOption[] {
       return [
         { value: 'L', text: 'Level L (7%)' },
         { value: 'M', text: 'Level M (15%)' },
