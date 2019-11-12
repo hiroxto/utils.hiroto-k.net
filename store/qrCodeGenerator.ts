@@ -1,10 +1,11 @@
-import { QrCodeGeneratorState, QrCodeErrorCorrectionLevel } from '~/types';
+import { QrCodeGeneratorState, QrCodeErrorCorrectionLevel, QrCodeRenderAsOptionValue } from '~/types';
 import { MutationTree } from 'vuex';
 
 export const state = (): QrCodeGeneratorState => ({
   value: '',
   size: 250,
   level: 'H',
+  renderAs: 'canvas',
   backGround: '#ffffff',
   foreGround: '#000000',
 });
@@ -18,6 +19,9 @@ export const mutations: MutationTree<QrCodeGeneratorState> = {
   },
   setLevel (state: QrCodeGeneratorState, payload: QrCodeErrorCorrectionLevel): void {
     state.level = payload;
+  },
+  setRenderAs (state: QrCodeGeneratorState, payload: QrCodeRenderAsOptionValue): void {
+    state.renderAs = payload;
   },
   setBackGround (state: QrCodeGeneratorState, payload: string): void {
     state.backGround = payload;

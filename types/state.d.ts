@@ -1,4 +1,4 @@
-import { Link, OpenLink, QrCodeErrorCorrectionLevel } from './index';
+import { Link, OpenLink, QrCodeErrorCorrectionLevel, QrCodeRenderAsOptionValue } from './index';
 
 export interface RootState {
   pageLinks: PageLinksState;
@@ -24,6 +24,7 @@ export interface QrCodeGeneratorState {
   value: string;
   size: number;
   level: QrCodeErrorCorrectionLevel;
+  renderAs: QrCodeRenderAsOptionValue;
   backGround: string;
   foreGround: string;
 }
