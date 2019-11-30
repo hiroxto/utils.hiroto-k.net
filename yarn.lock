@@ -9031,10 +9031,10 @@ vary@^1.1.2, vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
 
-vee-validate@3.0.11:
-  version "3.0.11"
-  resolved "https://registry.yarnpkg.com/vee-validate/-/vee-validate-3.0.11.tgz#5ffe3d501893801529186642d20241cf632f1341"
-  integrity sha512-2KRLdtM/y+bU2o9KC7cZBGPRUsBxQaoFb3IlBOUkj6l24Gx5XWXxNkhaAXK97BRLOdM4CH/gJYFi9DOm0N7dTQ==
+vee-validate@3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/vee-validate/-/vee-validate-3.1.3.tgz#24194db0d67b71d629b11a4c8030a7413da8b969"
+  integrity sha512-wqQfmblN1RUTfcj94b62bUdiRT0bkJ9KWxNG0KdVomg89JufRrs0cJeRN5XnBeNHwrPop44qwGu6YzkaXDlGeA==
 
 vendors@^1.0.0:
   version "1.0.2"
