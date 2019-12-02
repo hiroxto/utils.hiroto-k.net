@@ -1096,12 +1096,12 @@
     ts-loader "^6.2.1"
     typescript "~3.6"
 
-"@nuxt/typescript-runtime@0.2.7":
-  version "0.2.7"
-  resolved "https://registry.yarnpkg.com/@nuxt/typescript-runtime/-/typescript-runtime-0.2.7.tgz#f599549eea8d9b0e5367b5e1e653e3b135b61616"
-  integrity sha512-yoaQ7fxgBJOtvxlVGOSBEUZv8suiFFlUrnN5/f3hsr39eh4QYyykZSQnhXaYQ6BuQ3Dqur+4uuwu07y7KvpLKg==
+"@nuxt/typescript-runtime@0.2.10":
+  version "0.2.10"
+  resolved "https://registry.yarnpkg.com/@nuxt/typescript-runtime/-/typescript-runtime-0.2.10.tgz#7146b6ef709b2491567d8572c7e562fb686551d5"
+  integrity sha512-aO5yqK8RrcGH25KrrS58Da3/+4Ei4NbF5neQ3p0A8QlaOc2yY2qfp8BEP2kAhwkpMIP3PhcyQVUf3uCf0Mjc9w==
   dependencies:
-    "@nuxt/types" "0.5.0"
+    "@nuxt/types" "0.5.3"
     ts-node "^8.5.4"
     typescript "~3.6"
 
