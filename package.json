@@ -20,7 +20,7 @@
     "ts-node": "8.5.4"
   },
   "devDependencies": {
-    "@nuxt/types": "0.5.0",
+    "@nuxt/types": "0.5.3",
     "@nuxt/typescript-build": "0.3.7",
     "@types/marked": "0.7.2",
     "@typescript-eslint/eslint-plugin": "2.9.0",
