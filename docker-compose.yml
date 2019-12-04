@@ -6,6 +6,6 @@ services:
     tty: true
     command: yarn run dev
     volumes:
-      - .:/app
+      - .:/app:cached
     ports:
       - "8080:3000"
