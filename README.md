@@ -22,3 +22,18 @@ $ yarn start
 # generate static project
 $ yarn run generate
 ```
+
+Docker and Docker Compose
+```bash
+# run build
+$ docker-compose build
+
+# run command
+$ docker-compose run --rm nuxt <command>
+
+# start containers
+$ docker-compose up -d
+
+# stop containers
+$ docker-compose down
+```
