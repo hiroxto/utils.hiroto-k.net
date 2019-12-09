@@ -37,7 +37,6 @@
     "eslint-plugin-vue": "6.0.1",
     "marked": "0.7.0",
     "node-sass": "4.13.0",
-    "nodemon": "2.0.1",
     "qrcode.vue": "1.7.0",
     "raw-loader": "4.0.0",
     "sass-loader": "8.0.0",
