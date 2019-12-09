@@ -58,7 +58,7 @@ const nuxtConfig: Configuration = {
   */
   build: {
     extractCSS: true,
-    hardSource: true,
+    hardSource: false,
 
     transpile: [
       'vee-validate/dist/rules',
