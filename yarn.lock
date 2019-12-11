@@ -1095,14 +1095,14 @@
     ts-loader "^6.2.1"
     typescript "~3.6"
 
-"@nuxt/typescript-runtime@0.2.10":
-  version "0.2.10"
-  resolved "https://registry.yarnpkg.com/@nuxt/typescript-runtime/-/typescript-runtime-0.2.10.tgz#7146b6ef709b2491567d8572c7e562fb686551d5"
-  integrity sha512-aO5yqK8RrcGH25KrrS58Da3/+4Ei4NbF5neQ3p0A8QlaOc2yY2qfp8BEP2kAhwkpMIP3PhcyQVUf3uCf0Mjc9w==
+"@nuxt/typescript-runtime@0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@nuxt/typescript-runtime/-/typescript-runtime-0.3.1.tgz#1f9f0f6bd00aa229c733422ca4dd79490f0f18fe"
+  integrity sha512-yQ2oKuQcv4kgV3CQKW2gyS6Sqo/rIF9+1CbKsR7V5AsIGn1UvCUzj+GDunAoZfIIyG+n7Of71ndFsVLGEjNEDQ==
   dependencies:
-    "@nuxt/types" "0.5.3"
+    "@nuxt/types" "0.5.5"
     ts-node "^8.5.4"
-    typescript "~3.6"
+    typescript "~3.7"
 
 "@nuxt/utils@2.10.2":
   version "2.10.2"
@@ -8666,6 +8666,11 @@ typescript@~3.6:
   version "3.6.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.6.3.tgz#fea942fabb20f7e1ca7164ff626f1a9f3f70b4da"
   integrity sha512-N7bceJL1CtRQ2RiG0AQME13ksR7DiuQh/QehubYcghzv20tnh+MQnQIuJddTmsbqYj+dztchykemz0zFzlvdQw==
+
+typescript@~3.7:
+  version "3.7.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.3.tgz#b36840668a16458a7025b9eabfad11b66ab85c69"
+  integrity sha512-Mcr/Qk7hXqFBXMN7p7Lusj1ktCBydylfQM/FZCk5glCNQJrCUKPkMHdo9R0MTFWsC/4kPFvDS0fDPvukfCkFsw==
 
 ua-parser-js@^0.7.20:
   version "0.7.20"
