@@ -5,5 +5,13 @@
   "timezone": "Asia/Tokyo",
   "schedule": [
     "every weekend"
+  ],
+  "packageRules": [
+    {
+      "packagePatterns": [
+        "Dockerfile"
+      ],
+      "enabled": false
+    }
   ]
 }
