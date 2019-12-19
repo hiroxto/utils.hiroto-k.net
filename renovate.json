@@ -1,9 +1,9 @@
 {
-    "extends": [
-        "config:base"
-    ],
-    "timezone": "Asia/Tokyo",
-    "schedule": [
-        "every weekend"
-    ]
+  "extends": [
+    "config:base"
+  ],
+  "timezone": "Asia/Tokyo",
+  "schedule": [
+    "every weekend"
+  ]
 }
