@@ -64,21 +64,12 @@ const nuxtConfig: Configuration = {
       'vee-validate/dist/rules',
     ],
 
-    extend (config, { isDev, isClient }): void {
+    extend (config): void {
       config.module.rules.push({
         test: /\.md$/,
         loader: 'raw-loader',
         exclude: /(node_modules)/,
       });
-
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/,
-        });
-      }
     },
   },
 };
