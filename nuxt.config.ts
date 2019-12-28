@@ -51,6 +51,8 @@ const nuxtConfig: Configuration = {
       typeCheck: true,
       ignoreNotFoundWarnings: true,
     }],
+
+    '@nuxtjs/eslint-module',
   ],
 
   /*
