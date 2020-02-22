@@ -4,12 +4,12 @@
   ],
   "timezone": "Asia/Tokyo",
   "schedule": [
-    "every saturday"
+    "on saturday"
   ],
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": [
-      "every sunday"
+      "on sunday"
     ]
   },
   "patch": {
