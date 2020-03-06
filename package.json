@@ -13,7 +13,7 @@
     "lint:fix": "eslint --fix --ext .js,.ts,.vue ."
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "0.3.10",
+    "@nuxt/typescript-runtime": "0.4.0",
     "cross-env": "7.0.2",
     "nuxt": "2.11.0",
     "nuxt-buefy": "0.3.23",
