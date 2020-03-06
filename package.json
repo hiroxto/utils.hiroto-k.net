@@ -23,7 +23,7 @@
     "@nuxt/types": "0.6.4",
     "@nuxt/typescript-build": "0.5.8",
     "@nuxtjs/eslint-module": "1.1.0",
-    "@types/marked": "0.7.2",
+    "@types/marked": "0.7.3",
     "@typescript-eslint/eslint-plugin": "2.22.0",
     "@typescript-eslint/parser": "2.22.0",
     "eslint": "6.8.0",
