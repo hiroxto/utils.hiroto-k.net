@@ -18,6 +18,19 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Cache node_modules
+        uses: actions/cache@v1
+        env:
+          cache-name: cache-node_modules
+        with:
+          path: node_modules
+          key: utils-net-build-${{ env.cache-name }}-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            utils-net-build-${{ env.cache-name }}-${{ hashFiles('yarn.lock') }}
+            utils-net-build-${{ env.cache-name }}-
+            utils-net-build-
+            utils-net-
+
       - name: Run yarn install
         run: yarn install
         env:
