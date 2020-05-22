@@ -16,7 +16,7 @@
     "@nuxt/typescript-runtime": "0.4.6",
     "cross-env": "7.0.2",
     "nuxt": "2.12.2",
-    "nuxt-buefy": "0.3.29",
+    "nuxt-buefy": "0.3.30",
     "ts-node": "8.10.1"
   },
   "devDependencies": {
