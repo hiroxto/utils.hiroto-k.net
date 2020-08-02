@@ -39,7 +39,7 @@
     "qrcode.vue": "1.7.0",
     "raw-loader": "4.0.1",
     "sass-loader": "9.0.2",
-    "vee-validate": "3.3.7"
+    "vee-validate": "3.3.8"
   },
   "browserslist": [
     ">0.25%",
