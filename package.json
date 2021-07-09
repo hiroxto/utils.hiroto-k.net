@@ -17,7 +17,7 @@
     "cross-env": "7.0.3",
     "nuxt": "2.14.12",
     "nuxt-buefy": "0.4.8",
-    "ts-node": "9.1.1"
+    "ts-node": "10.1.0"
   },
   "devDependencies": {
     "@nuxt/types": "2.14.12",
