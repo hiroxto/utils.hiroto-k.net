@@ -1,12 +1,15 @@
 <template>
   <div class="play-container">
     <div class="buttons">
-      <button
-        class="button is-medium is-danger is-rounded has-text-warning"
+      <b-button
+        size="is-medium"
+        type="is-info"
+        icon-left="contactless-payment"
+        rounded
         @click="playSound"
       >
-        Open normal
-      </button>
+        Play Sound
+      </b-button>
     </div>
   </div>
 </template>

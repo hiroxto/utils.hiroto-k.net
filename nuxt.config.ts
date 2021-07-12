@@ -42,7 +42,7 @@ const nuxtConfig: Configuration = {
   */
   modules: [
     ['nuxt-buefy', {
-      materialDesignIcons: false,
+      materialDesignIcons: true,
     }],
   ],
 
