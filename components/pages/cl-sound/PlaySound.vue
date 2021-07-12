@@ -15,7 +15,9 @@
 </template>
 
 <script lang="ts">
-export default {
+import Vue from 'vue';
+
+export default Vue.extend({
   name: 'PlaySound',
   computed: {
     audioContext (): AudioContext {
@@ -35,5 +37,5 @@ export default {
       }, 500);
     },
   },
-};
+});
 </script>
