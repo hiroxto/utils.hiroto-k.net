@@ -6,10 +6,6 @@ export const state = (): PageLinksState => ({
     title: 'Top page',
     to: '/',
   },
-  openLinksPageLink: {
-    title: 'Open links',
-    to: '/open',
-  },
   trainNumberPageLink: {
     title: '列車番号メモ',
     to: '/train-number',
@@ -40,7 +36,6 @@ export const getters: GetterTree<PageLinksState, RootState> = {
   allPageLinks (state: PageLinksState): Link[] {
     return [
       state.topPageLink,
-      state.openLinksPageLink,
       state.trainNumberPageLink,
       state.trainNumberCalcPageLink,
       state.qrCodeGeneratorPageLink,
@@ -49,7 +44,6 @@ export const getters: GetterTree<PageLinksState, RootState> = {
   },
   pageLinks (state: PageLinksState): Link[] {
     return [
-      state.openLinksPageLink,
       state.trainNumberPageLink,
       state.trainNumberCalcPageLink,
       state.qrCodeGeneratorPageLink,

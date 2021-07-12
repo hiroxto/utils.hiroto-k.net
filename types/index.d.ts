@@ -5,10 +5,6 @@ export interface Link {
   to: string;
 }
 
-export interface OpenLink extends Link {
-  except: boolean;
-}
-
 export type QrCodeErrorCorrectionLevel = 'L' | 'M' | 'Q' | 'H';
 export type QrCodeRenderAsOptionValue = 'canvas' | 'svg';
 
