@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="how-to-calc mt-5">
     <h3>
       列車種別の求め方
     </h3>

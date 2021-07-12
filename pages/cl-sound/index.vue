@@ -7,11 +7,13 @@
       <h2 class="subtitle" v-text="description">
       </h2>
 
-      <play-sound>
-      </play-sound>
+      <div class="content">
+        <play-sound>
+        </play-sound>
 
-      <specification>
-      </specification>
+        <specification>
+        </specification>
+      </div>
     </div>
   </section>
 </template>
