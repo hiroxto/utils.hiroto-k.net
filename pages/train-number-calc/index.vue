@@ -7,11 +7,13 @@
       <h2 class="subtitle" v-text="description">
       </h2>
 
-      <number-calc>
-      </number-calc>
+      <div class="content">
+        <number-calc>
+        </number-calc>
 
-      <how-to-calc>
-      </how-to-calc>
+        <how-to-calc>
+        </how-to-calc>
+      </div>
     </div>
   </section>
 </template>

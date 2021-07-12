@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="number-calc">
     <div class="field">
       <validation-provider
         name="列車番号"
