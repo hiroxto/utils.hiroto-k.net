@@ -18,7 +18,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import PlaySound from '../../components/pages/cl-sound/PlaySound';
+import PlaySound from '~/components/pages/cl-sound/PlaySound';
 import Specification from '~/components/pages/cl-sound/Specification';
 
 export default Vue.extend({
