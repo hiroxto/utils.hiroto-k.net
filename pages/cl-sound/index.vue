@@ -9,6 +9,9 @@
 
       <play-sound>
       </play-sound>
+
+      <specification>
+      </specification>
     </div>
   </section>
 </template>
@@ -16,6 +19,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import PlaySound from '../../components/pages/cl-sound/PlaySound';
+import Specification from '~/components/pages/cl-sound/Specification';
 
 export default Vue.extend({
   head () {
@@ -28,6 +32,7 @@ export default Vue.extend({
   },
   components: {
     PlaySound,
+    Specification,
   },
   computed: {
     title (): string {
