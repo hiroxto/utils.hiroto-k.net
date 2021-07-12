@@ -6,12 +6,16 @@
 
       <h2 class="subtitle" v-text="description">
       </h2>
+
+      <play-sound>
+      </play-sound>
     </div>
   </section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import PlaySound from '../../components/pages/cl-sound/PlaySound';
 
 export default Vue.extend({
   head () {
@@ -21,6 +25,9 @@ export default Vue.extend({
         { hid: 'description', name: 'description', content: this.description },
       ],
     };
+  },
+  components: {
+    PlaySound,
   },
   computed: {
     title (): string {
