@@ -30,6 +30,10 @@ export const state = (): PageLinksState => ({
     title: 'QRコード生成',
     to: '/qr-code',
   },
+  contactlessSoundPage: {
+    title: 'EMVコンタクトレスのサウンドをWeb Audio APIで再生',
+    to: '/cl-sound',
+  },
 });
 
 export const getters: GetterTree<PageLinksState, RootState> = {
@@ -40,6 +44,7 @@ export const getters: GetterTree<PageLinksState, RootState> = {
       state.trainNumberPageLink,
       state.trainNumberCalcPageLink,
       state.qrCodeGeneratorPageLink,
+      state.contactlessSoundPage,
     ];
   },
   pageLinks (state: PageLinksState): Link[] {
@@ -48,6 +53,7 @@ export const getters: GetterTree<PageLinksState, RootState> = {
       state.trainNumberPageLink,
       state.trainNumberCalcPageLink,
       state.qrCodeGeneratorPageLink,
+      state.contactlessSoundPage,
     ];
   },
   trainNumberContentPageLinks (state: PageLinksState): Link[] {

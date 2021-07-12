@@ -14,6 +14,7 @@ export interface PageLinksState {
   trainNumber20190316PageLink: Link;
   trainNumberCalcPageLink: Link;
   qrCodeGeneratorPageLink: Link;
+  contactlessSoundPage: Link;
 }
 
 export interface OpenLinksState {
