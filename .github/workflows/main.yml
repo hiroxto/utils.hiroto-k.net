@@ -33,18 +33,12 @@ jobs:
 
       - name: Run yarn install
         run: yarn install
-        env:
-          CI: true
 
       - name: Run yarn build
         run: yarn run build
-        env:
-          CI: true
 
       - name: Run yarn lint
         run: yarn run lint
-        env:
-          CI: true
 
       - name: Slack Notification
         uses: homoluctus/slatify@v1.6
